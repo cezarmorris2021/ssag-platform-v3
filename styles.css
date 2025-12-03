@@ -1,0 +1,48 @@
+
+*{box-sizing:border-box;}
+body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#050712;color:#f5f7ff;}
+a{color:#23b4ff;}
+.app-shell{min-height:100vh;display:flex;flex-direction:column;}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:12px 22px;border-bottom:1px solid rgba(255,255,255,0.08);background:radial-gradient(circle at top left,#1b2348,#050712 55%);position:sticky;top:0;z-index:20;}
+.logo-block{display:flex;align-items:center;gap:10px;}
+.logo-mark{width:26px;height:26px;border-radius:9px;background:conic-gradient(from 160deg,#3f6bff,#23b4ff,#181f3b);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;}
+.logo-text{display:flex;flex-direction:column;}
+.logo-text span:first-child{font-size:.9rem;font-weight:600;}
+.logo-text span:last-child{font-size:.7rem;opacity:.7;}
+.nav{display:flex;flex-wrap:wrap;gap:6px;align-items:center;justify-content:flex-end;}
+.nav a{font-size:.8rem;padding:4px 10px;border-radius:999px;text-decoration:none;color:#e5e8ff;opacity:.85;}
+.nav a:hover{background:rgba(255,255,255,0.08);}
+.nav a.active{background:linear-gradient(90deg,#3f6bff,#23b4ff);color:#050712;opacity:1;}
+.nav-cta{padding:6px 14px;border-radius:999px;background:linear-gradient(90deg,#3f6bff,#23b4ff);font-size:.8rem;font-weight:600;text-decoration:none;color:#050712!important;}
+.main{padding:22px 18px 32px;max-width:1120px;margin:0 auto;width:100%;}
+.hero{display:grid;grid-template-columns:minmax(0,2.1fr) minmax(0,1.7fr);gap:22px;align-items:center;margin-bottom:26px;}
+@media(max-width:860px){.hero{grid-template-columns:minmax(0,1fr);}}
+.hero-title{font-size:1.9rem;margin:0 0 10px 0;}
+.hero-sub{font-size:.9rem;opacity:.84;max-width:520px;margin-bottom:14px;}
+.hero-badges{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;}
+.badge{font-size:.7rem;padding:4px 10px;border-radius:999px;border:1px solid rgba(255,255,255,0.16);opacity:.85;}
+.hero-actions{display:flex;flex-wrap:wrap;gap:8px;}
+.btn-primary{display:inline-block;padding:8px 16px;border-radius:999px;border:none;background:linear-gradient(90deg,#3f6bff,#23b4ff);color:#050712;font-size:.85rem;font-weight:600;cursor:pointer;text-decoration:none;}
+.btn-ghost{display:inline-block;padding:8px 16px;border-radius:999px;border:1px solid rgba(255,255,255,0.18);color:#f5f7ff;font-size:.8rem;cursor:pointer;background:transparent;text-decoration:none;}
+.hero-panel{border-radius:18px;border:1px solid rgba(255,255,255,0.08);background:radial-gradient(circle at top,#181f3b,#050712 65%);padding:14px 16px 16px;}
+.hero-panel-title{font-size:.85rem;opacity:.9;margin-bottom:8px;}
+.division-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;}
+.card{border-radius:14px;border:1px solid rgba(255,255,255,0.08);background:radial-gradient(circle at top left,#181f3b,#050712 60%);padding:12px 13px 14px;}
+.card h3{font-size:.95rem;margin:0 0 4px 0;}
+.card p{font-size:.8rem;opacity:.85;margin:0 0 8px 0;}
+.card small{font-size:.7rem;opacity:.7;}
+.section-title{font-size:1rem;margin:18px 0 6px;}
+.section-sub{font-size:.8rem;opacity:.8;margin-bottom:10px;}
+.table{width:100%;border-collapse:collapse;font-size:.78rem;margin-top:8px;}
+.table th,.table td{padding:6px 8px;border-bottom:1px solid rgba(255,255,255,0.08);text-align:left;}
+.table th{opacity:.7;font-weight:500;}
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;}
+.kpi{padding:10px 11px;border-radius:10px;border:1px solid rgba(255,255,255,0.08);background:rgba(3,8,35,0.9);}
+.kpi-label{font-size:.7rem;opacity:.7;}
+.kpi-value{font-size:.95rem;font-weight:600;margin-top:2px;}
+.form-card{max-width:640px;border-radius:14px;border:1px solid rgba(255,255,255,0.08);background:radial-gradient(circle at top left,#181f3b,#050712 65%);padding:14px 16px 16px;}
+.form-row{margin-bottom:10px;}
+label{display:block;font-size:.78rem;margin-bottom:3px;}
+input[type="text"],input[type="email"],select,textarea{width:100%;padding:7px 9px;border-radius:8px;border:1px solid rgba(255,255,255,0.18);background:rgba(3,6,25,0.95);color:#f5f7ff;font-size:.8rem;}
+textarea{min-height:80px;}
+.footer-note{margin-top:24px;font-size:.7rem;opacity:.6;text-align:center;padding-bottom:12px;}
