@@ -7,7 +7,6 @@
   <style>
     :root {
       --bg: #020617;
-      --bg-alt: #020617;
       --accent: #38bdf8;
       --accent-soft: rgba(56, 189, 248, 0.16);
       --accent-strong: #0ea5e9;
@@ -43,6 +42,7 @@
       padding: 18px 14px 72px;
     }
 
+    /* Header */
     header {
       display: flex;
       align-items: center;
@@ -201,7 +201,7 @@
     .hero p {
       font-size: 14px;
       color: var(--muted);
-      max-width: 560px;
+      max-width: 620px;
       margin-bottom: 12px;
     }
     .pill-row {
@@ -364,7 +364,8 @@
     }
   </style>
   <script>
-    function goToForm() {
+    // Simple helper: when any "open" button is clicked, send them to your Google Form
+    function openCommandDeck() {
       window.location.href = "https://forms.gle/SpxuXWmUbDeeeBXC9";
     }
   </script>
@@ -381,15 +382,15 @@
       </div>
       <nav aria-label="Primary">
         <a href="#top" class="nav-link active">Home</a>
-        <a href="#about-ssag" class="nav-link">About</a>
+        <a href="#about" class="nav-link">About SSAG</a>
         <a href="#command-deck" class="nav-link">Command Deck</a>
-        <a href="#divisions" class="nav-link">Divisions</a>
         <a href="#offers-menu" class="nav-link">Offers</a>
-        <a href="#invest" class="nav-link">Invest</a>
+        <a href="#apply" class="nav-link">Operators</a>
+        <a href="#invest" class="nav-link">Investors</a>
       </nav>
       <div class="header-actions">
-        <button class="btn-pill" onclick="goToForm()">Log in / Apply</button>
-        <button class="btn-primary" onclick="goToForm()">Claim a Territory</button>
+        <button class="btn-pill" onclick="openCommandDeck()">Log in / Apply</button>
+        <button class="btn-primary" onclick="openCommandDeck()">Open Command Deck</button>
       </div>
     </header>
 
@@ -399,57 +400,63 @@
           <span class="eyebrow-dot"></span>
           <span>Stealth enterprise shell</span>
         </div>
-        <h1>Stealth enterprise system for licensors, operators, and investors.</h1>
+        <h1>Stealth enterprise system for licenses, operators, and investors.</h1>
         <p>
-          SSAG is a hybrid business platform that lets you sell city licenses, operator kits,
-          and digital business packs from a single, unified command environment.
+          SSAG is your master platform for selling city licenses, giving operators ready-to-run business kits,
+          and onboarding investors into a growing network of local service systems under one umbrella.
         </p>
         <div class="pill-row">
-          <span class="pill">Stealth operations</span>
-          <span class="pill">License-ready systems</span>
+          <span class="pill">Turnkey local business systems</span>
+          <span class="pill">City &amp; territory licensing</span>
           <span class="pill">Operator network</span>
-          <span class="pill">Investor suite</span>
+          <span class="pill">Investor-friendly structure</span>
         </div>
         <div class="hero-actions">
-          <button class="btn-primary" onclick="goToForm()">Open Command Deck</button>
-          <button class="btn-outline" onclick="goToForm()">View Operator &amp; Investor Offers</button>
+          <button class="btn-primary" onclick="openCommandDeck()">Open Command Deck</button>
+          <button class="btn-outline" onclick="openCommandDeck()">Apply for Operator / License / Investor</button>
         </div>
         <div class="hero-footer">
-          <span>Present SSAG as the platform your buyers plug into.</span>
-          <span class="highlight">Not just another single business for sale.</span>
+          <span>Think of SSAG as the “mothership” for all your done-for-you business systems.</span>
+          <span class="highlight">People plug into SSAG instead of buying a random one-off business.</span>
         </div>
       </section>
 
-      <section class="card" id="about-ssag">
-        <h2>What SSAG is and what it’s built to do</h2>
+      <!-- ABOUT SSAG ENTERPRISE -->
+      <section class="card" id="about">
+        <h2>What is SSAG as an enterprise?</h2>
         <p class="section-subtitle">
-          SSAG (Stealth Systems Automation Group) is your umbrella enterprise for multiple, connected money systems.
+          SSAG (Stealth Systems Automation Group) is your whole umbrella company. Under SSAG you hold
+          multiple ready-to-launch business systems, tools, and offers that can be sold, licensed, or operated.
         </p>
         <div class="two-col">
           <div>
+            <h3 style="font-size: 13px; margin-bottom: 4px;">What lives under SSAG</h3>
             <ul class="list">
-              <li>Acts as the <strong>parent brand</strong> over all your turnkey businesses and local service systems.</li>
-              <li>Lets you package and sell <strong>digital business packs, operator kits, and city licenses</strong>.</li>
-              <li>Gives you one clean place to send buyers, partners, and investors.</li>
-              <li>Can plug into your YouTube channels, funnels, bots, emails, and payment links.</li>
+              <li>Local service business systems (cleaning, junk removal, detailing, concierge, etc.).</li>
+              <li>Digital packs (scripts, ads, templates, SOPs) that people can download and run.</li>
+              <li>Operator kits with higher-touch support and territory planning.</li>
+              <li>City and territory licenses that give exclusive rights to use your systems in an area.</li>
+              <li>Connections to your other brands and projects when you’re ready (YouTube, gadgets, etc.).</li>
             </ul>
           </div>
           <div>
+            <h3 style="font-size: 13px; margin-bottom: 4px;">What SSAG is designed to do</h3>
             <ul class="list">
-              <li>Designed so you can <strong>license</strong> your systems by city or territory.</li>
-              <li>Supports operators who want a ready-made business-in-a-box.</li>
-              <li>Gives investors a simple way to see how SSAG can grow into multiple markets.</li>
-              <li>Built to be <strong>sellable</strong> later as a complete, organized enterprise.</li>
+              <li>Turn your ideas and systems into organized, sellable “slots” (packs, kits, licenses).</li>
+              <li>Give you one home base page you can send everyone to instead of 10 different links.</li>
+              <li>Make it easy to explain your enterprise to buyers, operators, and investors.</li>
+              <li>Prepare you to either run SSAG long-term or eventually sell it as a full platform.</li>
             </ul>
           </div>
         </div>
       </section>
 
+      <!-- DIVISIONS + MONETIZATION -->
       <section class="grid" aria-label="Divisions and monetization">
         <article class="card" id="divisions">
           <h2>Divisions snapshot</h2>
           <p class="section-subtitle">
-            Four connected divisions you can sell, license, or operate under one unified brand.
+            Four connected divisions that live under the SSAG umbrella.
           </p>
           <div class="division-list">
             <div class="division">
@@ -462,7 +469,7 @@
             <div class="division">
               <h3>SSAG AI</h3>
               <p>
-                Prompts and workflows that turn AI into an operator sitting inside your business.
+                Prompts, workflows, and automations that act like an assistant inside each business.
               </p>
               <span>Scripts, SOPs, ads, and launch messaging on demand.</span>
             </div>
@@ -471,14 +478,14 @@
               <p>
                 City, county, and state-level licensing frameworks with optional exclusivity.
               </p>
-              <span>Launch AZ-first, then expand to national and international territories.</span>
+              <span>Start Arizona-first, then expand into national and international territories.</span>
             </div>
             <div class="division">
               <h3>SSAG Operator Network</h3>
               <p>
-                Franchise-style operator kits without the heavy franchise fees or overhead.
+                Franchise-style operator kits without heavy franchise fees or corporate overhead.
               </p>
-              <span>Perfect for committed partners and high-ticket operators.</span>
+              <span>Perfect for committed partners and serious local operators.</span>
             </div>
           </div>
         </article>
@@ -486,7 +493,7 @@
         <aside class="card" id="offers">
           <h2>Monetization overview</h2>
           <p class="section-subtitle">
-            Position SSAG as a revenue engine instead of a single product.
+            This is how SSAG turns into actual money instead of just ideas.
           </p>
           <table class="monetization-table">
             <thead>
@@ -504,7 +511,7 @@
               </tr>
               <tr>
                 <td>Operator kit</td>
-                <td>$5,000 – $15,000</td>
+                <td>$2,500 – $15,000</td>
                 <td>Higher-support, franchise-style package for serious operators.</td>
               </tr>
               <tr>
@@ -515,7 +522,7 @@
               <tr>
                 <td>Investor participation</td>
                 <td>$5,000 – $50,000</td>
-                <td>Structured capital raise built around platform growth and territory rollouts.</td>
+                <td>Capital for systems, operators, and territory expansion under SSAG.</td>
               </tr>
             </tbody>
           </table>
@@ -527,96 +534,81 @@
         </aside>
       </section>
 
+      <!-- OFFERS MENU -->
       <section class="card" id="offers-menu">
-        <h2>Choose your track</h2>
+        <h2>Choose your SSAG track</h2>
         <p class="section-subtitle">
-          Start lean with a digital pack or lock in a full territory. SSAG is built to match your level.
+          Start lean with a digital pack or lock in a full territory. SSAG meets you at your level.
         </p>
         <div class="division-list">
           <div class="division">
-            <h3>Digital Launch Pack – $97</h3>
+            <h3>Digital Launch Pack – example $97</h3>
             <p>Done-for-you local service business framework. Perfect for testing the waters or starting a side hustle.</p>
             <span>Includes service menu, pricing ideas, launch checklist, and customer scripts.</span>
           </div>
           <div class="division">
-            <h3>Operator Kit – from $2,500</h3>
-            <p>For people who want to run SSAG systems seriously in one territory with direct help.</p>
-            <span>Includes everything in the digital pack plus calls with Cezar, territory planning, and launch support.</span>
+            <h3>Operator Kit – from example $2,500</h3>
+            <p>For people who want to run SSAG systems seriously in one territory with direct help from you.</p>
+            <span>Includes everything in the digital pack plus calls with you, territory planning, and launch support.</span>
           </div>
           <div class="division">
-            <h3>City License – from $5,000</h3>
+            <h3>City License – from example $5,000</h3>
             <p>Exclusive rights to run SSAG systems in an entire city under the SSAG umbrella.</p>
             <span>Best fit for operators and investors who want a bigger play and control over a whole area.</span>
           </div>
         </div>
         <div class="hero-actions" style="margin-top:12px;">
-          <button class="btn-primary" onclick="goToForm()">Apply for a Spot</button>
-          <button class="btn-outline" onclick="goToForm()">Tell Me Which Track Fits Me</button>
+          <button class="btn-primary" onclick="openCommandDeck()">Apply for a Spot</button>
+          <button class="btn-outline" onclick="openCommandDeck()">Ask Which Track Fits Me</button>
         </div>
       </section>
 
+      <!-- COMMAND DECK -->
       <section class="card" id="command-deck">
         <h2>Command Deck</h2>
         <p class="section-subtitle">
-          The SSAG Command Deck is the control surface where you route deals, operators,
-          and investors into the right tracks.
+          This page is the “front of house”. Behind the scenes you plug in your payment links,
+          forms, automation, and systems.
         </p>
         <div class="two-col">
           <div>
-            <h3 style="font-size: 13px; margin-bottom: 4px;">How people enter SSAG</h3>
+            <h3 style="font-size: 13px; margin-bottom: 4px;">What this page does</h3>
             <ul class="list">
-              <li>They visit this page and click any button.</li>
-              <li>They land on your Google Form and fill out a short application.</li>
-              <li>You review their answers and decide if they are a fit.</li>
-              <li>You offer a digital pack, operator kit, or city license based on their level.</li>
+              <li>Sends people to your Google Form when they click any main button.</li>
+              <li>Lets you explain SSAG clearly in one place instead of 10 scattered links.</li>
+              <li>Gives you a simple link to text, DM, or email to anyone interested.</li>
             </ul>
           </div>
           <div>
-            <h3 style="font-size: 13px; margin-bottom: 4px;">What plugs in behind the scenes</h3>
+            <h3 style="font-size: 13px; margin-bottom: 4px;">What you add later</h3>
             <ul class="list">
-              <li>Payment links (Stripe, PayPal, or any processor you use).</li>
-              <li>Email sequences for launch, onboarding, and updates.</li>
-              <li>Automation bots that send playbooks, templates, or contracts.</li>
-              <li>Shared folders that contain the actual business-in-a-box systems.</li>
+              <li>Payment buttons (Stripe, PayPal, invoice links, etc.).</li>
+              <li>Automation (email follow-up, onboarding flows, etc.).</li>
+              <li>Links to your decks, documents, and private data rooms.</li>
             </ul>
           </div>
         </div>
       </section>
 
+      <!-- OPERATOR / INVESTOR TRACKS -->
       <section class="two-col">
         <article class="card" id="apply">
           <h2>Operator track</h2>
           <p class="section-subtitle">
-            SSAG as a path for operators who want a done-with-you business system.
+            For people who want to run a serious local business using SSAG systems.
           </p>
           <ul class="list">
-            <li>Simple intake form asking about market, budget, and timeline.</li>
-            <li>Call or message flow that qualifies if they’re a fit for a territory.</li>
-            <li>Offer ladder: digital packs → local operator kits → full city license.</li>
-            <li>Optional: performance-based deals or revenue share per territory.</li>
+            <li>They fill out the SSAG application form.</li>
+            <li>You review their city, budget, and experience.</li>
+            <li>You decide if they fit digital pack, operator kit, or city license.</li>
+            <li>You get on a call, explain options, and close the right deal.</li>
           </ul>
+          <div class="hero-actions" style="margin-top:10px;">
+            <button class="btn-primary" onclick="openCommandDeck()">Apply as Operator</button>
+          </div>
         </article>
 
         <article class="card" id="invest">
           <h2>Investor &amp; partner track</h2>
           <p class="section-subtitle">
-            Show how investors plug capital into territories, systems, or portfolio deals.
-          </p>
-          <ul class="list">
-            <li>Overview of how SSAG creates multiple streams from a single platform.</li>
-            <li>Explain where funds go: systems, operators, marketing, and expansion.</li>
-            <li>Outline example deal structures: equity, revenue share, or notes.</li>
-            <li>Point to a private data room or deck when you have one ready.</li>
-          </ul>
-        </article>
-      </section>
-    </main>
-
-    <footer>
-      SSAG • Stealth Systems Automation Group • Front-end shell hosted on GitHub Pages.
-      Connect this shell to your automations, payment links, and data rooms behind the scenes.
-    </footer>
-  </div>
-</body>
-        </html>
-        
+            For people who want to back SSAG growth or hold multiple territorie
