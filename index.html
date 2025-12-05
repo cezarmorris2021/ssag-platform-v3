@@ -144,16 +144,6 @@
       border: none;
       cursor: pointer;
     }
-    .btn-outline {
-      border-radius: var(--radius-pill);
-      padding: 8px 16px;
-      font-size: 12px;
-      font-weight: 500;
-      border: 1px solid rgba(148,163,184,0.7);
-      background: rgba(15,23,42,0.9);
-      color: var(--text);
-      cursor: pointer;
-    }
 
     main {
       margin-top: 16px;
@@ -224,6 +214,16 @@
       flex-wrap: wrap;
       gap: 10px;
       margin-bottom: 6px;
+    }
+    .btn-outline {
+      border-radius: var(--radius-pill);
+      padding: 8px 16px;
+      font-size: 12px;
+      font-weight: 500;
+      border: 1px solid rgba(148,163,184,0.7);
+      background: rgba(15,23,42,0.9);
+      color: var(--text);
+      cursor: pointer;
     }
     .hero-footer {
       font-size: 11px;
@@ -379,14 +379,12 @@
         <a href="#top" class="nav-link active">Home</a>
         <a href="#command-deck" class="nav-link">Command Deck</a>
         <a href="#divisions" class="nav-link">Divisions</a>
-        <a href="#offers-menu" class="nav-link">Offers</a>
-        <a href="#apply" class="nav-link">Operator</a>
+        <a href="#offers-menu" class="nav-link">Marketplace</a>
+        <a href="#apply" class="nav-link">Apply</a>
         <a href="#invest" class="nav-link">Invest</a>
       </nav>
       <div class="header-actions">
-        <button class="btn-pill" onclick="window.location.href='https://forms.gle/SpxuXWmUbDeeeBXC9'">
-          Log in / Apply
-        </button>
+        <button class="btn-pill">Log in</button>
         <button class="btn-primary" onclick="window.location.href='https://forms.gle/SpxuXWmUbDeeeBXC9'">
           Claim a Territory
         </button>
@@ -533,7 +531,7 @@
             Apply for a Spot
           </button>
           <button class="btn-outline" onclick="window.location.href='https://forms.gle/SpxuXWmUbDeeeBXC9'">
-            Ask Which Track Fits Me
+            Tell Me Which Track Fits Me
           </button>
         </div>
       </section>
@@ -548,17 +546,17 @@
           <div>
             <h3 style="font-size: 13px; margin-bottom: 4px;">Use this page as the shell</h3>
             <ul class="list">
-              <li>Buttons send people straight into your SSAG application form.</li>
-              <li>You review each application and decide digital pack, operator kit, or city license.</li>
-              <li>Once they’re in, you share your playbooks, scripts, and systems.</li>
-              <li>Everything is run under the SSAG umbrella so it feels like one enterprise.</li>
+              <li>Drop in your own payment buttons, checkout links, or proposal forms.</li>
+              <li>Connect Calendly or any scheduling link for operator and investor calls.</li>
+              <li>Link to private Notion docs, Google Drive folders, or data rooms.</li>
+              <li>Route deals based on whether someone is a license buyer, operator, or investor.</li>
             </ul>
           </div>
           <div>
             <h3 style="font-size: 13px; margin-bottom: 4px;">What plugs in behind the scenes</h3>
             <ul class="list">
-              <li>CRMs and pipelines (when you’re ready to add them).</li>
-              <li>Email sequences for launch, onboarding, and updates.</li>
+              <li>CRMs and pipelines (HubSpot, GoHighLevel, Close, etc.).</li>
+              <li>Email sequences for launch, onboarding, and ongoing updates.</li>
               <li>Automation bots that send playbooks, templates, or contracts.</li>
               <li>Shared folders that contain the actual business-in-a-box systems.</li>
             </ul>
@@ -570,43 +568,28 @@
         <article class="card" id="apply">
           <h2>Operator track</h2>
           <p class="section-subtitle">
-            For people who want a done-with-you business system and are ready to work.
+            Frame SSAG as a path for operators who want a done-with-you business system.
           </p>
           <ul class="list">
-            <li>They apply using the SSAG form and choose “Operator Kit” or “City License”.</li>
-            <li>You talk with them by phone/Zoom and confirm if they’re a good fit.</li>
-            <li>You set expectations, territory, and pricing before they commit.</li>
-            <li>You guide them through launch using your SSAG systems and scripts.</li>
+            <li>Simple intake form asking about market, budget, and timeline.</li>
+            <li>Call or message flow that qualifies if they’re a fit for a territory.</li>
+            <li>Offer ladder: digital packs → local operator kits → full city license.</li>
+            <li>Optional: performance-based deals or revenue share per territory.</li>
           </ul>
         </article>
 
         <article class="card" id="invest">
           <h2>Investor &amp; partner track</h2>
           <p class="section-subtitle">
-            For people who want to put money into SSAG systems, territories, or portfolios.
+            Show how investors plug capital into territories, systems, or portfolio deals.
           </p>
           <ul class="list">
-            <li>They apply with the same form and select “Investor / Partner”.</li>
-            <li>You explain how SSAG creates multiple income streams from one platform.</li>
-            <li>You outline example deal structures (equity, revenue share, or notes).</li>
-            <li>You grow SSAG by adding more cities, operators, and business packs.</li>
+            <li>Overview of how SSAG creates multiple streams from a single platform.</li>
+            <li>Explain where funds go: systems, operators, marketing, and expansion.</li>
+            <li>Outline example deal structures: equity, revenue share, or notes.</li>
+            <li>Point to a private data room or deck when you have one ready.</li>
           </ul>
         </article>
-      </section>
-
-      <section class="card" id="overview">
-        <h2>What SSAG is as an enterprise</h2>
-        <p class="section-subtitle">
-          SSAG is your umbrella platform that connects all your systems into one story: local services, AI tools,
-          turnkey businesses, licenses, and operators.
-        </p>
-        <ul class="list">
-          <li>One brand at the top (SSAG – Stealth Systems Automation Group).</li>
-          <li>Multiple “plug-in” businesses under it (cleaning, junk removal, micro-agency, etc.).</li>
-          <li>AI-powered tools and scripts so you can deliver systems faster and with less manual work.</li>
-          <li>Licensing and operator tracks so people can run your systems in their city under your umbrella.</li>
-          <li>Investor and partner track so people can help fund expansion into more territories.</li>
-        </ul>
       </section>
     </main>
 
