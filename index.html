@@ -7,8 +7,11 @@
   <style>
     :root {
       --bg: #020617;
+      --bg-alt: #020617;
       --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.16);
       --accent-strong: #0ea5e9;
+      --accent-warm: #f97316;
       --text: #f9fafb;
       --muted: #9ca3af;
       --border: rgba(148, 163, 184, 0.3);
@@ -40,7 +43,6 @@
       padding: 18px 14px 72px;
     }
 
-    /* Header */
     header {
       display: flex;
       align-items: center;
@@ -48,7 +50,7 @@
       gap: 10px;
       padding: 10px 14px;
       margin-bottom: 18px;
-      border-radius: 20px;
+      border-radius: var(--radius-lg);
       background: linear-gradient(135deg, rgba(15,23,42,0.96), rgba(15,23,42,0.75));
       border: 1px solid rgba(55, 65, 81, 0.9);
       box-shadow: 0 20px 40px rgba(15,23,42,0.9);
@@ -139,12 +141,8 @@
       background: linear-gradient(135deg, #0ea5e9, #22d3ee);
       box-shadow: 0 12px 30px rgba(14,165,233,0.75);
       border: none;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
     }
 
-    /* Hero */
     main {
       margin-top: 16px;
       display: grid;
@@ -223,9 +221,6 @@
       border: 1px solid rgba(148,163,184,0.7);
       background: rgba(15,23,42,0.9);
       color: var(--text);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
     }
     .hero-footer {
       font-size: 11px;
@@ -387,10 +382,9 @@
       </nav>
       <div class="header-actions">
         <button class="btn-pill">Log in</button>
-        <!-- Top-right Open Command Deck button goes to Google Form -->
-        <a class="btn-primary" href="https://forms.gle/SpxuXWmUbDeeeBXC9" target="_blank">
-          Open Command Deck
-        </a>
+        <button class="btn-primary" onclick="window.location.href='https://forms.gle/SpxuXWmUbDeeeBXC9'">
+          Claim a Territory
+        </button>
       </div>
     </header>
 
@@ -412,13 +406,12 @@
           <span class="pill">Investor suite</span>
         </div>
         <div class="hero-actions">
-          <!-- Hero buttons both go to the same Google Form for now -->
-          <a class="btn-primary" href="https://forms.gle/SpxuXWmUbDeeeBXC9" target="_blank">
+          <button class="btn-primary" onclick="window.location.href='https://forms.gle/SpxuXWmUbDeeeBXC9'">
             Open Command Deck
-          </a>
-          <a class="btn-outline" href="https://forms.gle/SpxuXWmUbDeeeBXC9" target="_blank">
+          </button>
+          <button class="btn-outline" onclick="window.location.href='https://forms.gle/SpxuXWmUbDeeeBXC9'">
             View Operator &amp; Investor Offers
-          </a>
+          </button>
         </div>
         <div class="hero-footer">
           <span>Present SSAG as the platform your buyers plug into.</span>
@@ -428,7 +421,7 @@
 
       <section class="grid" aria-label="Divisions and monetization">
         <article class="card" id="divisions">
-          <h2>Divisions Snapshot</h2>
+          <h2>Divisions snapshot</h2>
           <p class="section-subtitle">
             Four connected divisions you can sell, license, or operate under one unified brand.
           </p>
@@ -465,7 +458,7 @@
         </article>
 
         <aside class="card" id="offers">
-          <h2>Monetization Overview</h2>
+          <h2>Monetization overview</h2>
           <p class="section-subtitle">
             Position SSAG as a revenue engine instead of a single product.
           </p>
@@ -518,10 +511,10 @@
           <div>
             <h3 style="font-size: 13px; margin-bottom: 4px;">Use this page as the shell</h3>
             <ul class="list">
-              <li>Drop in your own payment buttons, checkout links, or proposal forms.</li>
-              <li>Connect Calendly or any scheduling link for operator and investor calls.</li>
-              <li>Link to private Notion docs, Google Drive folders, or data rooms.</li>
-              <li>Route deals based on whether someone is a license buyer, operator, or investor.</li>
+              <li>Send people here first so they understand SSAG at a glance.</li>
+              <li>Let the buttons send them to your SSAG Google Form to apply.</li>
+              <li>From the form, you follow up by phone, text, or email.</li>
+              <li>Decide if they’re a fit for a digital pack, operator kit, or city license.</li>
             </ul>
           </div>
           <div>
@@ -538,7 +531,7 @@
 
       <section class="two-col">
         <article class="card" id="apply">
-          <h2>Operator Track</h2>
+          <h2>Operator track</h2>
           <p class="section-subtitle">
             Frame SSAG as a path for operators who want a done-with-you business system.
           </p>
@@ -551,7 +544,7 @@
         </article>
 
         <article class="card" id="invest">
-          <h2>Investor Track</h2>
+          <h2>Investor &amp; partner track</h2>
           <p class="section-subtitle">
             Show how investors plug capital into territories, systems, or portfolio deals.
           </p>
@@ -571,4 +564,5 @@
     </footer>
   </div>
 </body>
-</html>
+  </html>
+  
