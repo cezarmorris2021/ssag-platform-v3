@@ -155,7 +155,7 @@
       cursor: pointer;
     }
 
-    /* Main layout */
+    /* Hero */
     main {
       margin-top: 16px;
       display: grid;
@@ -239,6 +239,7 @@
       font-weight: 500;
     }
 
+    /* Cards / grid */
     .grid {
       display: grid;
       gap: 16px;
@@ -266,6 +267,7 @@
       margin-bottom: 10px;
     }
 
+    /* Divisions */
     .division-list {
       display: grid;
       gap: 10px;
@@ -306,6 +308,7 @@
       color: var(--muted);
     }
 
+    /* Monetization table */
     .monetization-table {
       width: 100%;
       border-collapse: collapse;
@@ -334,6 +337,7 @@
       color: var(--muted);
     }
 
+    /* Two-column sections */
     .two-col {
       display: grid;
       gap: 14px;
@@ -356,6 +360,31 @@
       color: var(--accent);
     }
 
+    /* Systems grid */
+    .systems-grid {
+      display: grid;
+      gap: 10px;
+    }
+    @media (min-width: 880px) {
+      .systems-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+    .system-card {
+      border-radius: 16px;
+      padding: 10px 10px 10px;
+      background: radial-gradient(circle at top, rgba(15,23,42,1), #020617);
+      border: 1px solid rgba(55,65,81,0.9);
+    }
+    .system-card h3 {
+      font-size: 13px;
+      margin-bottom: 3px;
+    }
+    .system-card p {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
     footer {
       margin-top: 24px;
       font-size: 10px;
@@ -365,6 +394,11 @@
       border-top: 1px dashed rgba(31,41,55,0.9);
     }
   </style>
+  <script>
+    function goToForm() {
+      window.location.href = "https://forms.gle/SpxuXWmUbDeeeBXC9";
+    }
+  </script>
 </head>
 <body>
   <div class="page">
@@ -380,22 +414,19 @@
         <a href="#top" class="nav-link active">Home</a>
         <a href="#command-deck" class="nav-link">Command Deck</a>
         <a href="#divisions" class="nav-link">Divisions</a>
-        <a href="#systems" class="nav-link">Business Systems</a>
+        <a href="#systems" class="nav-link">Top Businesses</a>
         <a href="#offers-menu" class="nav-link">Offers</a>
         <a href="#apply" class="nav-link">Apply</a>
         <a href="#invest" class="nav-link">Invest</a>
       </nav>
       <div class="header-actions">
-        <button class="btn-pill" onclick="window.location.href='https://forms.gle/SpxuXWmUbDeeeBXC9'">
-          Log in / Apply
-        </button>
-        <button class="btn-primary" onclick="window.location.href='https://forms.gle/SpxuXWmUbDeeeBXC9'">
-          Claim a Territory
-        </button>
+        <button class="btn-pill" onclick="goToForm()">Log in</button>
+        <button class="btn-primary" onclick="goToForm()">Claim a Territory</button>
       </div>
     </header>
 
     <main id="top">
+      <!-- HERO -->
       <section class="hero">
         <div class="eyebrow">
           <span class="eyebrow-dot"></span>
@@ -413,12 +444,8 @@
           <span class="pill">Investor suite</span>
         </div>
         <div class="hero-actions">
-          <button class="btn-primary" onclick="window.location.href='https://forms.gle/SpxuXWmUbDeeeBXC9'">
-            Open Command Deck
-          </button>
-          <button class="btn-outline" onclick="window.location.href='https://forms.gle/SpxuXWmUbDeeeBXC9'">
-            View Operator &amp; Investor Offers
-          </button>
+          <button class="btn-primary" onclick="goToForm()">Open Command Deck</button>
+          <button class="btn-outline" onclick="goToForm()">View Operator &amp; Investor Offers</button>
         </div>
         <div class="hero-footer">
           <span>Present SSAG as the platform your buyers plug into.</span>
@@ -426,6 +453,7 @@
         </div>
       </section>
 
+      <!-- DIVISIONS + MONETIZATION -->
       <section class="grid" aria-label="Divisions and monetization">
         <article class="card" id="divisions">
           <h2>Divisions snapshot</h2>
@@ -438,7 +466,7 @@
               <p>
                 Business-in-a-box systems, service menus, and playbooks you can license, sell, or operate.
               </p>
-              <span>Cleaning, detailing, junk removal, courier, micro-agency, and more.</span>
+              <span>Cleaning, detailing, junk removal, concierge, courier, and more.</span>
             </div>
             <div class="division">
               <h3>SSAG AI</h3>
@@ -508,75 +536,91 @@
         </aside>
       </section>
 
-      <!-- Top 10 business systems -->
+      <!-- TOP BUSINESS SYSTEMS -->
       <section class="card" id="systems">
         <h2>Top SSAG business systems</h2>
         <p class="section-subtitle">
-          Ten plug-and-play systems you can license, operate, or bundle into city deals.
+          Ten plug-and-play business models that can be licensed, operated, or packaged under SSAG.
         </p>
-        <div class="division-list">
-          <div class="division">
-            <h3>1. SSAG Clean Sweep</h3>
-            <p>Residential &amp; small commercial cleaning with simple packages and repeat customers.</p>
-            <span>Perfect starter system for steady monthly cash flow.</span>
+        <div class="systems-grid">
+          <div class="system-card">
+            <h3>1. Mobile Notary Public</h3>
+            <p>
+              Travel-based notary service for documents, real estate, and loan signings. Built to pair with
+              veterans, seniors, and busy professionals.
+            </p>
           </div>
-          <div class="division">
-            <h3>2. SSAG Junk &amp; Haul</h3>
-            <p>Junk removal and light hauling using trucks, trailers, or partnered haulers.</p>
-            <span>High-ticket jobs, fast payouts, easy to upsell add-on services.</span>
+          <div class="system-card">
+            <h3>2. Third-Party DMV &amp; Title Services</h3>
+            <p>
+              Paperwork help, registration renewals, and title assistance as a concierge-style service
+              for people who hate going to the DMV.
+            </p>
           </div>
-          <div class="division">
-            <h3>3. SSAG Detail Force</h3>
-            <p>Mobile auto detailing &amp; fleet wash system.</p>
-            <span>Great for neighborhoods, dealerships, and small fleets.</span>
+          <div class="system-card">
+            <h3>3. Wedding &amp; Event Minister / Officiant</h3>
+            <p>
+              Simple officiant service for weddings, vow renewals, and small ceremonies with upsells
+              for photos, video, and planning help.
+            </p>
           </div>
-          <div class="division">
-            <h3>4. SSAG Move Assist</h3>
-            <p>Labor-only moving help, furniture moves, and small local relocations.</p>
-            <span>Pairs well with junk removal and cleaning for full “move-out” packages.</span>
+          <div class="system-card">
+            <h3>4. Airbnb Co-Host &amp; B&amp;B Co-Manager</h3>
+            <p>
+              Full or partial management of short-term rentals: messaging, cleaning coordination,
+              pricing tweaks, and guest check-in flows.
+            </p>
           </div>
-          <div class="division">
-            <h3>5. SSAG Rapid Courier</h3>
-            <p>Same-day local courier runs, documents, parts, and urgent deliveries.</p>
-            <span>Can plug into existing vans, cars, or gig drivers.</span>
+          <div class="system-card">
+            <h3>5. Tucson Home Concierge</h3>
+            <p>
+              Local “one-call” concierge: errands, key handoffs, wellness checks, and light house management
+              for owners and out-of-town families.
+            </p>
           </div>
-          <div class="division">
-            <h3>6. SSAG Rent-Ready Turnover</h3>
-            <p>Turnkey “make-ready” for landlords: clean, patch, small fixes, ready to re-rent.</p>
-            <span>Targets property managers, landlords, and small investors.</span>
+          <div class="system-card">
+            <h3>6. Junk Removal &amp; Hauling</h3>
+            <p>
+              Same-day or scheduled junk removal, property cleanups, and light demo. Easy to start with a
+              truck and simple pricing menu.
+            </p>
           </div>
-          <div class="division">
-            <h3>7. SSAG Home Concierge</h3>
-            <p>Errands, basic house checks, appointment waiting, and VIP personal help.</p>
-            <span>Ideal for busy professionals, seniors, and remote owners.</span>
+          <div class="system-card">
+            <h3>7. Mobile Auto Detailing</h3>
+            <p>
+              On-site car, truck, and fleet detailing for homes and small businesses, with add-ons for
+              ceramic, headlight restore, and more.
+            </p>
           </div>
-          <div class="division">
-            <h3>8. SSAG Vendor Connect</h3>
-            <p>Broker system that matches customers with trusted local vendors you manage.</p>
-            <span>You control leads and take a fee or revenue share per job.</span>
+          <div class="system-card">
+            <h3>8. Pressure Washing &amp; Exterior Cleaning</h3>
+            <p>
+              Driveways, pool decks, storefronts, and HOA common areas – paired with upsells into
+              maintenance contracts and seasonal cleans.
+            </p>
           </div>
-          <div class="division">
-            <h3>9. SSAG Night Shield Patrol</h3>
-            <p>Non-armed night property checks, lights &amp; locks, photo proof, and reports.</p>
-            <span>Great add-on for small commercial, storage, and rentals.</span>
+          <div class="system-card">
+            <h3>9. Pool &amp; Yard Service Partner Network</h3>
+            <p>
+              Lead-gen and route management for pool cleaning, light landscaping, and basic outdoor upkeep,
+              done under one SSAG umbrella.
+            </p>
           </div>
-          <div class="division">
-            <h3>10. SSAG Ad &amp; Lead Lab</h3>
-            <p>Local lead generation service for small businesses using SSAG ad templates.</p>
-            <span>Run as its own business or as support for all other SSAG systems.</span>
+          <div class="system-card">
+            <h3>10. Courier &amp; Micro-Freight Runner</h3>
+            <p>
+              Local small-item courier: documents, parts, urgent deliveries for shops and individuals,
+              built to run with a single truck at first.
+            </p>
           </div>
         </div>
-        <div class="hero-actions" style="margin-top:12px;">
-          <button class="btn-primary" onclick="window.location.href='https://forms.gle/SpxuXWmUbDeeeBXC9'">
-            Apply to Run One of These
-          </button>
-          <button class="btn-outline" onclick="window.location.href='https://forms.gle/SpxuXWmUbDeeeBXC9'">
-            Ask Which System Fits Me
-          </button>
+        <div class="hero-actions" style="margin-top: 12px;">
+          <button class="btn-primary" onclick="goToForm()">Apply to Run One of These</button>
+          <button class="btn-outline" onclick="goToForm()">Ask Which System Fits Me</button>
         </div>
       </section>
 
-      <!-- Offers menu -->
+      <!-- OFFERS MENU -->
       <section class="card" id="offers-menu">
         <h2>Choose your track</h2>
         <p class="section-subtitle">
@@ -591,7 +635,7 @@
           <div class="division">
             <h3>Operator Kit – from $2,500</h3>
             <p>For people who want to run SSAG systems seriously in one territory with direct help.</p>
-            <span>Includes everything in the digital pack plus calls with Cezar, territory planning, and launch support.</span>
+            <span>Includes everything in the digital pack plus calls with you, territory planning, and launch support.</span>
           </div>
           <div class="division">
             <h3>City License – from $5,000</h3>
@@ -600,22 +644,5 @@
           </div>
         </div>
         <div class="hero-actions" style="margin-top:12px;">
-          <button class="btn-primary" onclick="window.location.href='https://forms.gle/SpxuXWmUbDeeeBXC9'">
-            Apply for a Spot
-          </button>
-          <button class="btn-outline" onclick="window.location.href='https://forms.gle/SpxuXWmUbDeeeBXC9'">
-            Tell Me Which Track Fits Me
-          </button>
-        </div>
-      </section>
-
-      <!-- Command Deck / Operator / Investor -->
-      <section class="card" id="command-deck">
-        <h2>Command Deck</h2>
-        <p class="section-subtitle">
-          The SSAG Command Deck is the control surface where you route deals, operators,
-          and investors into the right tracks.
-        </p>
-        <div class="two-col">
-          <div>
-            <h3 style="font-size: 13px; margin-bottom: 4px;">Use 
+          <button class="btn-primary" onclick="goToForm()">Apply for a Spot</button>
+        
