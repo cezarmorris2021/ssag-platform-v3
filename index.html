@@ -43,6 +43,7 @@
       padding: 18px 14px 72px;
     }
 
+    /* Header */
     header {
       display: flex;
       align-items: center;
@@ -154,6 +155,7 @@
       cursor: pointer;
     }
 
+    /* Main layout */
     main {
       margin-top: 16px;
       display: grid;
@@ -378,12 +380,15 @@
         <a href="#top" class="nav-link active">Home</a>
         <a href="#command-deck" class="nav-link">Command Deck</a>
         <a href="#divisions" class="nav-link">Divisions</a>
-        <a href="#offers-menu" class="nav-link">Marketplace</a>
+        <a href="#systems" class="nav-link">Business Systems</a>
+        <a href="#offers-menu" class="nav-link">Offers</a>
         <a href="#apply" class="nav-link">Apply</a>
         <a href="#invest" class="nav-link">Invest</a>
       </nav>
       <div class="header-actions">
-        <button class="btn-pill">Log in</button>
+        <button class="btn-pill" onclick="window.location.href='https://forms.gle/SpxuXWmUbDeeeBXC9'">
+          Log in / Apply
+        </button>
         <button class="btn-primary" onclick="window.location.href='https://forms.gle/SpxuXWmUbDeeeBXC9'">
           Claim a Territory
         </button>
@@ -503,6 +508,75 @@
         </aside>
       </section>
 
+      <!-- Top 10 business systems -->
+      <section class="card" id="systems">
+        <h2>Top SSAG business systems</h2>
+        <p class="section-subtitle">
+          Ten plug-and-play systems you can license, operate, or bundle into city deals.
+        </p>
+        <div class="division-list">
+          <div class="division">
+            <h3>1. SSAG Clean Sweep</h3>
+            <p>Residential &amp; small commercial cleaning with simple packages and repeat customers.</p>
+            <span>Perfect starter system for steady monthly cash flow.</span>
+          </div>
+          <div class="division">
+            <h3>2. SSAG Junk &amp; Haul</h3>
+            <p>Junk removal and light hauling using trucks, trailers, or partnered haulers.</p>
+            <span>High-ticket jobs, fast payouts, easy to upsell add-on services.</span>
+          </div>
+          <div class="division">
+            <h3>3. SSAG Detail Force</h3>
+            <p>Mobile auto detailing &amp; fleet wash system.</p>
+            <span>Great for neighborhoods, dealerships, and small fleets.</span>
+          </div>
+          <div class="division">
+            <h3>4. SSAG Move Assist</h3>
+            <p>Labor-only moving help, furniture moves, and small local relocations.</p>
+            <span>Pairs well with junk removal and cleaning for full “move-out” packages.</span>
+          </div>
+          <div class="division">
+            <h3>5. SSAG Rapid Courier</h3>
+            <p>Same-day local courier runs, documents, parts, and urgent deliveries.</p>
+            <span>Can plug into existing vans, cars, or gig drivers.</span>
+          </div>
+          <div class="division">
+            <h3>6. SSAG Rent-Ready Turnover</h3>
+            <p>Turnkey “make-ready” for landlords: clean, patch, small fixes, ready to re-rent.</p>
+            <span>Targets property managers, landlords, and small investors.</span>
+          </div>
+          <div class="division">
+            <h3>7. SSAG Home Concierge</h3>
+            <p>Errands, basic house checks, appointment waiting, and VIP personal help.</p>
+            <span>Ideal for busy professionals, seniors, and remote owners.</span>
+          </div>
+          <div class="division">
+            <h3>8. SSAG Vendor Connect</h3>
+            <p>Broker system that matches customers with trusted local vendors you manage.</p>
+            <span>You control leads and take a fee or revenue share per job.</span>
+          </div>
+          <div class="division">
+            <h3>9. SSAG Night Shield Patrol</h3>
+            <p>Non-armed night property checks, lights &amp; locks, photo proof, and reports.</p>
+            <span>Great add-on for small commercial, storage, and rentals.</span>
+          </div>
+          <div class="division">
+            <h3>10. SSAG Ad &amp; Lead Lab</h3>
+            <p>Local lead generation service for small businesses using SSAG ad templates.</p>
+            <span>Run as its own business or as support for all other SSAG systems.</span>
+          </div>
+        </div>
+        <div class="hero-actions" style="margin-top:12px;">
+          <button class="btn-primary" onclick="window.location.href='https://forms.gle/SpxuXWmUbDeeeBXC9'">
+            Apply to Run One of These
+          </button>
+          <button class="btn-outline" onclick="window.location.href='https://forms.gle/SpxuXWmUbDeeeBXC9'">
+            Ask Which System Fits Me
+          </button>
+        </div>
+      </section>
+
+      <!-- Offers menu -->
       <section class="card" id="offers-menu">
         <h2>Choose your track</h2>
         <p class="section-subtitle">
@@ -517,7 +591,7 @@
           <div class="division">
             <h3>Operator Kit – from $2,500</h3>
             <p>For people who want to run SSAG systems seriously in one territory with direct help.</p>
-            <span>Everything in the digital pack plus calls, territory planning, and launch support.</span>
+            <span>Includes everything in the digital pack plus calls with Cezar, territory planning, and launch support.</span>
           </div>
           <div class="division">
             <h3>City License – from $5,000</h3>
@@ -535,6 +609,7 @@
         </div>
       </section>
 
+      <!-- Command Deck / Operator / Investor -->
       <section class="card" id="command-deck">
         <h2>Command Deck</h2>
         <p class="section-subtitle">
@@ -543,59 +618,4 @@
         </p>
         <div class="two-col">
           <div>
-            <h3 style="font-size: 13px; margin-bottom: 4px;">Use this page as the shell</h3>
-            <ul class="list">
-              <li>Drop in your own payment buttons, checkout links, or proposal forms.</li>
-              <li>Connect Calendly or any scheduling link for operator and investor calls.</li>
-              <li>Link to private Notion docs, Google Drive folders, or data rooms.</li>
-              <li>Route deals based on whether someone is a license buyer, operator, or investor.</li>
-            </ul>
-          </div>
-          <div>
-            <h3 style="font-size: 13px; margin-bottom: 4px;">What plugs in behind the scenes</h3>
-            <ul class="list">
-              <li>CRMs and pipelines (HubSpot, GoHighLevel, Close, etc.).</li>
-              <li>Email sequences for launch, onboarding, and ongoing updates.</li>
-              <li>Automation bots that send playbooks, templates, or contracts.</li>
-              <li>Shared folders that contain the actual business-in-a-box systems.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section class="two-col">
-        <article class="card" id="apply">
-          <h2>Operator track</h2>
-          <p class="section-subtitle">
-            Frame SSAG as a path for operators who want a done-with-you business system.
-          </p>
-          <ul class="list">
-            <li>Simple intake form asking about market, budget, and timeline.</li>
-            <li>Call or message flow that qualifies if they’re a fit for a territory.</li>
-            <li>Offer ladder: digital packs → local operator kits → full city license.</li>
-            <li>Optional: performance-based deals or revenue share per territory.</li>
-          </ul>
-        </article>
-
-        <article class="card" id="invest">
-          <h2>Investor &amp; partner track</h2>
-          <p class="section-subtitle">
-            Show how investors plug capital into territories, systems, or portfolio deals.
-          </p>
-          <ul class="list">
-            <li>Overview of how SSAG creates multiple streams from a single platform.</li>
-            <li>Explain where funds go: systems, operators, marketing, and expansion.</li>
-            <li>Outline example deal structures: equity, revenue share, or notes.</li>
-            <li>Point to a private data room or deck when you have one ready.</li>
-          </ul>
-        </article>
-      </section>
-    </main>
-
-    <footer>
-      SSAG • Stealth Systems Automation Group • Front-end shell hosted on GitHub Pages.
-      Connect this shell to your automations, payment links, and data rooms behind the scenes.
-    </footer>
-  </div>
-</body>
-</html>
+            <h3 style="font-size: 13px; margin-bottom: 4px;">Use 
