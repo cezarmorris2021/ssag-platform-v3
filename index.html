@@ -141,6 +141,17 @@
       background: linear-gradient(135deg, #0ea5e9, #22d3ee);
       box-shadow: 0 12px 30px rgba(14,165,233,0.75);
       border: none;
+      cursor: pointer;
+    }
+    .btn-outline {
+      border-radius: var(--radius-pill);
+      padding: 8px 16px;
+      font-size: 12px;
+      font-weight: 500;
+      border: 1px solid rgba(148,163,184,0.7);
+      background: rgba(15,23,42,0.9);
+      color: var(--text);
+      cursor: pointer;
     }
 
     main {
@@ -212,15 +223,6 @@
       flex-wrap: wrap;
       gap: 10px;
       margin-bottom: 6px;
-    }
-    .btn-outline {
-      border-radius: var(--radius-pill);
-      padding: 8px 16px;
-      font-size: 12px;
-      font-weight: 500;
-      border: 1px solid rgba(148,163,184,0.7);
-      background: rgba(15,23,42,0.9);
-      color: var(--text);
     }
     .hero-footer {
       font-size: 11px;
@@ -376,7 +378,7 @@
         <a href="#top" class="nav-link active">Home</a>
         <a href="#command-deck" class="nav-link">Command Deck</a>
         <a href="#divisions" class="nav-link">Divisions</a>
-        <a href="#offers" class="nav-link">Marketplace</a>
+        <a href="#offers-menu" class="nav-link">Marketplace</a>
         <a href="#apply" class="nav-link">Apply</a>
         <a href="#invest" class="nav-link">Invest</a>
       </nav>
@@ -501,6 +503,38 @@
         </aside>
       </section>
 
+      <section class="card" id="offers-menu">
+        <h2>Choose your track</h2>
+        <p class="section-subtitle">
+          Start lean with a digital pack or lock in a full territory. SSAG is built to match your level.
+        </p>
+        <div class="division-list">
+          <div class="division">
+            <h3>Digital Launch Pack – $97</h3>
+            <p>Done-for-you local service business framework. Perfect for testing the waters or starting a side hustle.</p>
+            <span>Includes service menu, pricing ideas, launch checklist, and customer scripts.</span>
+          </div>
+          <div class="division">
+            <h3>Operator Kit – from $2,500</h3>
+            <p>For people who want to run SSAG systems seriously in one territory with direct help.</p>
+            <span>Includes everything in the digital pack plus calls with Cezar, territory planning, and launch support.</span>
+          </div>
+          <div class="division">
+            <h3>City License – from $5,000</h3>
+            <p>Exclusive rights to run SSAG systems in an entire city under the SSAG umbrella.</p>
+            <span>Best fit for operators and investors who want a bigger play and control over a whole area.</span>
+          </div>
+        </div>
+        <div class="hero-actions" style="margin-top:12px;">
+          <button class="btn-primary" onclick="window.location.href='https://forms.gle/SpxuXWmUbDeeeBXC9'">
+            Apply for a Spot
+          </button>
+          <button class="btn-outline" onclick="window.location.href='https://forms.gle/SpxuXWmUbDeeeBXC9'">
+            Tell Me Which Track Fits Me
+          </button>
+        </div>
+      </section>
+
       <section class="card" id="command-deck">
         <h2>Command Deck</h2>
         <p class="section-subtitle">
@@ -511,10 +545,10 @@
           <div>
             <h3 style="font-size: 13px; margin-bottom: 4px;">Use this page as the shell</h3>
             <ul class="list">
-              <li>Send people here first so they understand SSAG at a glance.</li>
-              <li>Let the buttons send them to your SSAG Google Form to apply.</li>
-              <li>From the form, you follow up by phone, text, or email.</li>
-              <li>Decide if they’re a fit for a digital pack, operator kit, or city license.</li>
+              <li>Drop in your own payment buttons, checkout links, or proposal forms.</li>
+              <li>Connect Calendly or any scheduling link for operator and investor calls.</li>
+              <li>Link to private Notion docs, Google Drive folders, or data rooms.</li>
+              <li>Route deals based on whether someone is a license buyer, operator, or investor.</li>
             </ul>
           </div>
           <div>
