@@ -7,9 +7,11 @@
   <style>
     :root {
       --bg: #020617;
+      --bg-alt: #020617;
       --accent: #38bdf8;
       --accent-soft: rgba(56, 189, 248, 0.16);
       --accent-strong: #0ea5e9;
+      --accent-warm: #f97316;
       --text: #f9fafb;
       --muted: #9ca3af;
       --border: rgba(148, 163, 184, 0.3);
@@ -18,22 +20,31 @@
       --radius-pill: 999px;
       --shadow-soft: 0 24px 70px rgba(15, 23, 42, 0.95);
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
         "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top left, #1f2937 0, #020617 30%, #000 80%);
+      background:
+        radial-gradient(circle at top left, #1f2937 0, #020617 30%, #000 80%);
       color: var(--text);
       min-height: 100vh;
     }
-    a { color: inherit; text-decoration: none; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
     .page {
       max-width: 1120px;
       margin: 0 auto;
       padding: 18px 14px 72px;
     }
 
-    /* Header */
+    /* HEADER */
+
     header {
       display: flex;
       align-items: center;
@@ -59,7 +70,8 @@
       width: 34px;
       height: 34px;
       border-radius: 999px;
-      background: radial-gradient(circle at 20% 20%, #e5f3ff, #0ea5e9 40%, #020617 80%);
+      background:
+        radial-gradient(circle at 20% 20%, #e5f3ff, #0ea5e9 40%, #020617 80%);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -106,7 +118,9 @@
       color: #020617;
       font-weight: 600;
     }
-    .nav-link:hover { color: var(--text); }
+    .nav-link:hover {
+      color: var(--text);
+    }
     .header-actions {
       display: flex;
       align-items: center;
@@ -131,18 +145,9 @@
       border: none;
       cursor: pointer;
     }
-    .btn-outline {
-      border-radius: var(--radius-pill);
-      padding: 8px 16px;
-      font-size: 12px;
-      font-weight: 500;
-      border: 1px solid rgba(148,163,184,0.7);
-      background: rgba(15,23,42,0.9);
-      color: var(--text);
-      cursor: pointer;
-    }
 
-    /* Layout */
+    /* HERO */
+
     main {
       margin-top: 16px;
       display: grid;
@@ -151,7 +156,8 @@
     .hero {
       border-radius: 24px;
       padding: 22px 18px 20px;
-      background: radial-gradient(circle at top, rgba(15,23,42,0.9), rgba(15,23,42,1));
+      background:
+        radial-gradient(circle at top, rgba(15,23,42,0.9), rgba(15,23,42,1));
       border: 1px solid rgba(148, 163, 184, 0.5);
       box-shadow: var(--shadow-soft);
     }
@@ -182,7 +188,9 @@
       margin-bottom: 10px;
     }
     @media (min-width: 820px) {
-      h1 { font-size: 32px; }
+      h1 {
+        font-size: 32px;
+      }
     }
     .hero p {
       font-size: 14px;
@@ -210,6 +218,16 @@
       gap: 10px;
       margin-bottom: 6px;
     }
+    .btn-outline {
+      border-radius: var(--radius-pill);
+      padding: 8px 16px;
+      font-size: 12px;
+      font-weight: 500;
+      border: 1px solid rgba(148,163,184,0.7);
+      background: rgba(15,23,42,0.9);
+      color: var(--text);
+      cursor: pointer;
+    }
     .hero-footer {
       font-size: 11px;
       color: var(--muted);
@@ -222,6 +240,8 @@
       color: var(--accent-strong);
       font-weight: 500;
     }
+
+    /* GRID SECTIONS */
 
     .grid {
       display: grid;
@@ -257,7 +277,8 @@
     .division {
       border-radius: 16px;
       padding: 10px 10px 10px;
-      background: radial-gradient(circle at top, rgba(15,23,42,1), #020617);
+      background:
+        radial-gradient(circle at top, rgba(15,23,42,1), #020617);
       border: 1px solid rgba(75,85,99,0.9);
     }
     .division h3 {
@@ -339,8 +360,31 @@
       color: var(--accent);
     }
 
+    /* TOP 10 SECTION */
+
+    .top10 {
+      display: grid;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .top10 h3 {
+      font-size: 14px;
+      margin-bottom: 2px;
+      color: var(--text);
+    }
+    .top10 strong {
+      color: var(--text);
+    }
+    .top10-item {
+      padding: 10px 10px 9px;
+      border-radius: 14px;
+      border: 1px solid rgba(51, 65, 85, 0.85);
+      background: radial-gradient(circle at top left, #020617, #020617);
+    }
+
     footer {
-      margin-top: 24px;
+      margin-top: 30px;
       font-size: 10px;
       color: var(--muted);
       text-align: center;
@@ -361,25 +405,19 @@
       </div>
       <nav aria-label="Primary">
         <a href="#top" class="nav-link active">Home</a>
-        <a href="#divisions" class="nav-link">Divisions</a>
-        <a href="#top10" class="nav-link">Top 10 Businesses</a>
-        <a href="#offers-menu" class="nav-link">Offers</a>
         <a href="#command-deck" class="nav-link">Command Deck</a>
-        <a href="#apply" class="nav-link">Apply</a>
-        <a href="#invest" class="nav-link">Invest</a>
+        <a href="#divisions" class="nav-link">Divisions</a>
+        <a href="#offers" class="nav-link">Monetization</a>
+        <a href="#top10" class="nav-link">Top 10 Systems</a>
       </nav>
       <div class="header-actions">
-        <button class="btn-pill" onclick="window.location.href='https://forms.gle/SpxuXWmUbDeeeBXC9'">
-          Log in / Apply
-        </button>
-        <button class="btn-primary" onclick="window.location.href='https://forms.gle/SpxuXWmUbDeeeBXC9'">
-          Claim a Territory
-        </button>
+        <button class="btn-pill">Log in</button>
+        <button class="btn-primary">Claim a Territory</button>
       </div>
     </header>
 
     <main id="top">
-      <!-- HERO (single, not duplicated) -->
+      <!-- HERO -->
       <section class="hero">
         <div class="eyebrow">
           <span class="eyebrow-dot"></span>
@@ -413,36 +451,44 @@
       <!-- DIVISIONS + MONETIZATION -->
       <section class="grid" aria-label="Divisions and monetization">
         <article class="card" id="divisions">
-          <h2>Divisions snapshot</h2>
+          <h2>Divisions Snapshot</h2>
           <p class="section-subtitle">
             Four connected divisions you can sell, license, or operate under one unified brand.
           </p>
           <div class="division-list">
             <div class="division">
               <h3>SSAG Ops</h3>
-              <p>Business-in-a-box systems, service menus, and playbooks you can license, sell, or operate.</p>
+              <p>
+                Business-in-a-box systems, service menus, and playbooks you can license, sell, or operate.
+              </p>
               <span>Cleaning, detailing, junk removal, courier, micro-agency, and more.</span>
             </div>
             <div class="division">
               <h3>SSAG AI</h3>
-              <p>Prompts and workflows that turn AI into an operator sitting inside your business.</p>
+              <p>
+                Prompts and workflows that turn AI into an operator sitting inside your business.
+              </p>
               <span>Scripts, SOPs, ads, and launch messaging on demand.</span>
             </div>
             <div class="division">
               <h3>SSAG Licensing</h3>
-              <p>City, county, and state-level licensing frameworks with optional exclusivity.</p>
+              <p>
+                City, county, and state-level licensing frameworks with optional exclusivity.
+              </p>
               <span>Launch AZ-first, then expand to national and international territories.</span>
             </div>
             <div class="division">
               <h3>SSAG Operator Network</h3>
-              <p>Franchise-style operator kits without the heavy franchise fees or overhead.</p>
+              <p>
+                Franchise-style operator kits without the heavy franchise fees or overhead.
+              </p>
               <span>Perfect for committed partners and high-ticket operators.</span>
             </div>
           </div>
         </article>
 
         <aside class="card" id="offers">
-          <h2>Monetization overview</h2>
+          <h2>Monetization Overview</h2>
           <p class="section-subtitle">
             Position SSAG as a revenue engine instead of a single product.
           </p>
@@ -462,7 +508,7 @@
               </tr>
               <tr>
                 <td>Operator kit</td>
-                <td>$5,000 – $15,000</td>
+                <td>$2,500 – $15,000</td>
                 <td>Higher-support, franchise-style package for serious operators.</td>
               </tr>
               <tr>
@@ -485,115 +531,129 @@
         </aside>
       </section>
 
-      <!-- TOP 10 BUSINESS SYSTEMS -->
-      <section class="card" id="top10">
-        <h2>Top 10 SSAG business systems</h2>
-        <p class="section-subtitle">
-          Examples of plug-and-play businesses that can live under the SSAG umbrella.
-        </p>
-        <div class="division-list">
-          <div class="division">
-            <h3>1. Mobile Notary Public</h3>
-            <p>On-demand notarization for real estate, legal, and loan documents.</p>
-            <span>High-trust, low overhead, can run solo or with a small team.</span>
-          </div>
-          <div class="division">
-            <h3>2. 3rd-Party DMV / Title Services</h3>
-            <p>Help people handle registrations, titles, and basic DMV paperwork without the long lines.</p>
-            <span>Great for Arizona and similar markets where 3rd-party services are common.</span>
-          </div>
-          <div class="division">
-            <h3>3. Wedding Officiant / Minister Services</h3>
-            <p>Perform weddings, elopements, and vow renewals with premium add-ons.</p>
-            <span>Bundles easily with photography, notary, and concierge services.</span>
-          </div>
-          <div class="division">
-            <h3>4. Airbnb / B&amp;B Co-Host &amp; Property Manager</h3>
-            <p>Manage listings, cleaners, and guests for short-term rental owners.</p>
-            <span>Co-host fees on top of cleaning or concierge add-ons.</span>
-          </div>
-          <div class="division">
-            <h3>5. Local Cleaning &amp; Turnover Crew</h3>
-            <p>Residential, move-out, and Airbnb turnover cleaning teams.</p>
-            <span>Connects naturally to co-hosting, junk removal, and handyman work.</span>
-          </div>
-          <div class="division">
-            <h3>6. Junk Removal &amp; Hauling</h3>
-            <p>On-demand junk removal, small demo, and clean-out services.</p>
-            <span>Pairs well with property managers, flippers, and landlords.</span>
-          </div>
-          <div class="division">
-            <h3>7. Auto Detailing &amp; Fleet Care</h3>
-            <p>Mobile detailing for individuals and small fleets.</p>
-            <span>Subscriptions for dealers, rideshare drivers, and car lots.</span>
-          </div>
-          <div class="division">
-            <h3>8. Courier &amp; Document Run Services</h3>
-            <p>Same-day runs for documents, parts, and urgent deliveries.</p>
-            <span>Stacks onto notary, DMV, and real estate support.</span>
-          </div>
-          <div class="division">
-            <h3>9. Home Concierge &amp; Errand Services</h3>
-            <p>Personal assistant for busy families, seniors, or travelers.</p>
-            <span>Add-on to Airbnb guests, corporate stays, and local professionals.</span>
-          </div>
-          <div class="division">
-            <h3>10. Micro-Agency for Local Businesses</h3>
-            <p>Done-for-you simple websites, Google Business setup, and basic ads.</p>
-            <span>Feeds clients into your other SSAG services when it fits.</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- OFFERS MENU -->
-      <section class="card" id="offers-menu">
-        <h2>Choose your SSAG track</h2>
-        <p class="section-subtitle">
-          Start lean with a digital pack or lock in a full city territory. SSAG is built to match your level.
-        </p>
-        <div class="division-list">
-          <div class="division">
-            <h3>Digital Launch Pack – from $97</h3>
-            <p>Done-for-you local service business framework. Perfect for testing the waters or starting a side hustle.</p>
-            <span>Includes service menu, pricing ideas, launch checklist, and customer scripts.</span>
-          </div>
-          <div class="division">
-            <h3>Operator Kit – from $2,500</h3>
-            <p>For people who want to run SSAG systems seriously in one territory with direct help.</p>
-            <span>Everything in the digital pack plus calls with Cezar, territory planning, and launch support.</span>
-          </div>
-          <div class="division">
-            <h3>City License – from $5,000</h3>
-            <p>Exclusive rights to run SSAG systems in an entire city under the SSAG umbrella.</p>
-            <span>Best fit for operators and investors who want a bigger play and control over a whole area.</span>
-          </div>
-        </div>
-        <div class="hero-actions" style="margin-top:12px;">
-          <button class="btn-primary" onclick="window.location.href='https://forms.gle/SpxuXWmUbDeeeBXC9'">
-            Apply for a Spot
-          </button>
-          <button class="btn-outline" onclick="window.location.href='https://forms.gle/SpxuXWmUbDeeeBXC9'">
-            Tell Me Which Track Fits Me
-          </button>
-        </div>
-      </section>
-
-      <!-- COMMAND DECK / OPERATOR / INVESTOR -->
+      <!-- COMMAND DECK EXPLAINER -->
       <section class="card" id="command-deck">
         <h2>Command Deck</h2>
         <p class="section-subtitle">
-          The SSAG Command Deck is where you route deals, operators, and investors into the right tracks.
+          The SSAG Command Deck is the control surface where you route deals, operators,
+          and investors into the right tracks.
         </p>
         <div class="two-col">
           <div>
-            <h3 style="font-size: 13px; margin-bottom: 4px;">How you use this page</h3>
+            <h3 style="font-size: 13px; margin-bottom: 4px;">Use this page as the shell</h3>
             <ul class="list">
-              <li>Send prospects here instead of random DMs and walls of text.</li>
-              <li>Tell them to click any button and fill out the short application.</li>
-              <li>Use the answers to decide: digital pack, operator kit, or city license.</li>
-              <li>Close the deal over phone, Zoom, or in person.</li>
+              <li>Drop in your own payment buttons, checkout links, or proposal forms.</li>
+              <li>Connect Calendly or any scheduling link for operator and investor calls.</li>
+              <li>Link to private Notion docs, Google Drive folders, or data rooms.</li>
+              <li>Route deals based on whether someone is a license buyer, operator, or investor.</li>
             </ul>
           </div>
           <div>
             <h3 style="font-size: 13px; margin-bottom: 4px;">What plugs in behind the scenes</h3>
-            <ul cl
+            <ul class="list">
+              <li>CRMs and pipelines (HubSpot, GoHighLevel, Close, etc.).</li>
+              <li>Email sequences for launch, onboarding, and ongoing updates.</li>
+              <li>Automation bots that send playbooks, templates, or contracts.</li>
+              <li>Shared folders that contain the actual business-in-a-box systems.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- OPERATOR & INVESTOR TRACKS -->
+      <section class="two-col">
+        <article class="card" id="apply">
+          <h2>Operator Track</h2>
+          <p class="section-subtitle">
+            Frame SSAG as a path for operators who want a done-with-you business system.
+          </p>
+          <ul class="list">
+            <li>Simple intake form asking about market, budget, and timeline.</li>
+            <li>Call or message flow that qualifies if they’re a fit for a territory.</li>
+            <li>Offer ladder: digital packs → local operator kits → full city license.</li>
+            <li>Optional: performance-based deals or revenue share per territory.</li>
+          </ul>
+        </article>
+
+        <article class="card" id="invest">
+          <h2>Investor Track</h2>
+          <p class="section-subtitle">
+            Show how investors plug capital into territories, systems, or portfolio deals.
+          </p>
+          <ul class="list">
+            <li>Overview of how SSAG creates multiple streams from a single platform.</li>
+            <li>Explain where funds go: systems, operators, marketing, and expansion.</li>
+            <li>Outline example deal structures: equity, revenue share, or notes.</li>
+            <li>Point to a private data room or deck when you have one ready.</li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- TOP 10 BUSINESS SYSTEMS -->
+      <section class="card" id="top10">
+        <h2>Top 10 SSAG Business Systems</h2>
+        <p class="section-subtitle">
+          These are the core businesses operators can launch under the SSAG umbrella.
+          Each one is designed for fast start-up, low overhead, and strong income potential.
+        </p>
+        <div class="top10">
+          <div class="top10-item">
+            <h3>1. SSAG Notary Division</h3>
+            <p>
+              Mobile notary, loan signing, fingerprinting add-ons. High demand, flexible, profitable.
+              Great starter business for beginners.
+            </p>
+          </div>
+
+          <div class="top10-item">
+            <h3>2. SSAG DMV / Third-Party Motor Vehicle Services</h3>
+            <p>
+              Titles, tags, registration services — huge demand and low competition.
+              One of the strongest licensing businesses.
+            </p>
+          </div>
+
+          <div class="top10-item">
+            <h3>3. SSAG Wedding Minister &amp; Officiant Services</h3>
+            <p>
+              Marriages, vow renewals, courthouse alternatives with premium packages.
+              High-profit per booking.
+            </p>
+          </div>
+
+          <div class="top10-item">
+            <h3>4. SSAG R&amp;B Co-Host (Airbnb-Style)</h3>
+            <p>
+              Manage short-term rentals for owners without owning property.
+              Recurring income, big operator opportunity.
+            </p>
+          </div>
+
+          <div class="top10-item">
+            <h3>5. SSAG Home Watch &amp; Property Check System</h3>
+            <p>
+              Weekly or bi-weekly home inspections for snowbirds and landlords.
+              Super low overhead, subscription based.
+            </p>
+          </div>
+
+          <div class="top10-item">
+            <h3>6. SSAG Courier / Document &amp; Parts Delivery</h3>
+            <p>
+              Immediate on-demand delivery with local partnerships.
+              Fast start-up; works with almost any car.
+            </p>
+          </div>
+
+          <div class="top10-item">
+            <h3>7. SSAG Mobile Detailing System</h3>
+            <p>
+              Full detailing services with premium upsells and recurring clients.
+              High margins and steady repeat business.
+            </p>
+          </div>
+
+          <div class="top10-item">
+            <h3>8. SSAG Junk Removal &amp; Hauling</h3>
+            <p>
+              Same-day junk pick
