@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <title>SSAG – Stealth Systems Automation Group</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <style>
     :root {
       --bg: #020617;
@@ -11,31 +12,36 @@
       --accent: #38bdf8;
       --accent-soft: rgba(56, 189, 248, 0.12);
       --accent-strong: #0ea5e9;
-      --card: #020817;
-      --card-alt: #020617;
-      --border: rgba(148, 163, 184, 0.35);
-      --text: #e5e7eb;
-      --muted: #94a3b8;
-      --pill: rgba(15, 23, 42, 0.9);
-      --heading: #f9fafb;
-      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.65);
+      --card: #020617;
+      --card-border: rgba(148, 163, 184, 0.35);
+      --text-main: #e5e7eb;
+      --text-muted: #9ca3af;
+      --text-soft: #6b7280;
+      --pill-bg: rgba(15, 23, 42, 0.9);
+      --pill-border: rgba(148, 163, 184, 0.35);
+      --shadow-soft: 0 18px 60px rgba(15, 23, 42, 0.9);
       --radius-lg: 24px;
-      --radius-md: 18px;
+      --radius-xl: 32px;
       --radius-pill: 999px;
+      --gap-section: 3.5rem;
+      --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Inter", sans-serif;
     }
 
     * {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
     }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
-        "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #0b1220 0, #020617 52%, #000 100%);
-      color: var(--text);
-      line-height: 1.5;
+      margin: 0;
+      min-height: 100vh;
+      font-family: var(--font-sans);
+      color: var(--text-main);
+      background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.10), transparent 55%),
+        radial-gradient(circle at top right, rgba(129, 140, 248, 0.18), transparent 60%),
+        linear-gradient(160deg, #020617 0%, #020617 45%, #020617 100%);
+      background-color: var(--bg);
       -webkit-font-smoothing: antialiased;
     }
 
@@ -44,711 +50,613 @@
       text-decoration: none;
     }
 
-    .page-shell {
+    main {
       max-width: 1120px;
       margin: 0 auto;
-      padding: 16px 16px 40px;
+      padding: 1.75rem 1.25rem 4.5rem; /* extra bottom padding so nothing is cut off */
     }
 
-    /* Header */
+    /* HEADER */
+
     header {
-      border-radius: var(--radius-lg);
-      padding: 16px 18px;
-      background: radial-gradient(circle at top left, #0f172a 0, #020617 55%, #000 100%);
-      border: 1px solid rgba(148, 163, 184, 0.3);
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 1.25rem 1.25rem 0.5rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 18px;
-      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.75);
+      gap: 1.25rem;
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 0.75rem;
     }
 
-    .brand-logo {
+    .brand-badge {
       width: 44px;
       height: 44px;
-      border-radius: 20px;
-      background: radial-gradient(circle at 30% 0, #38bdf8 0, #0f172a 52%, #020617 100%);
-      border: 1px solid rgba(148, 163, 184, 0.6);
+      border-radius: 999px;
+      background: radial-gradient(circle at top left, #38bdf8, #0f172a);
       display: flex;
       align-items: center;
       justify-content: center;
+      color: #e5f2ff;
       font-weight: 700;
-      font-size: 18px;
-      box-shadow: 0 12px 35px rgba(8, 47, 73, 0.9);
+      font-size: 1.05rem;
+      box-shadow: 0 12px 32px rgba(15, 23, 42, 0.9);
     }
 
     .brand-text {
       display: flex;
       flex-direction: column;
-      gap: 2px;
+      gap: 0.10rem;
     }
 
-    .brand-name {
+    .brand-title {
       font-weight: 700;
-      letter-spacing: 0.09em;
+      letter-spacing: 0.08em;
+      font-size: 0.80rem;
       text-transform: uppercase;
-      font-size: 13px;
-      color: var(--heading);
+      color: #cbd5f5;
     }
 
-    .brand-tagline {
-      font-size: 12px;
-      color: var(--muted);
+    .brand-subtitle {
+      font-size: 0.78rem;
+      color: var(--text-soft);
     }
 
     .header-actions {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 0.75rem;
     }
 
     .btn-pill {
+      padding: 0.45rem 0.95rem;
       border-radius: var(--radius-pill);
       border: 1px solid rgba(148, 163, 184, 0.4);
-      background: rgba(15, 23, 42, 0.92);
-      color: var(--muted);
-      font-size: 13px;
-      padding: 7px 14px;
-    }
-
-    .btn-primary {
-      border-radius: var(--radius-pill);
-      padding: 10px 18px;
-      border: none;
-      background: radial-gradient(circle at top left, var(--accent-strong), var(--accent));
-      color: #0b1120;
-      font-weight: 600;
-      font-size: 14px;
-      box-shadow: 0 16px 38px rgba(56, 189, 248, 0.5);
-    }
-
-    .btn-primary:hover {
-      filter: brightness(1.08);
-    }
-
-    /* Hero */
-    main {
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-    }
-
-    .hero {
-      border-radius: var(--radius-lg);
-      background: radial-gradient(circle at top left, #020617 0, #020617 50%, #000 100%);
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      padding: 22px 18px 22px;
-      box-shadow: var(--shadow-soft);
-    }
-
-    .eyebrow {
+      background: rgba(15, 23, 42, 0.8);
+      color: var(--text-main);
+      font-size: 0.78rem;
+      font-weight: 500;
       display: inline-flex;
       align-items: center;
-      gap: 7px;
+      justify-content: center;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn-pill-primary {
+      border-color: rgba(56, 189, 248, 0.8);
+      background: radial-gradient(circle at top left, #38bdf8, #0f172a);
+      color: #e5f2ff;
+      box-shadow: 0 18px 48px rgba(56, 189, 248, 0.35);
+      font-weight: 600;
+    }
+
+    /* HERO */
+
+    .hero {
+      margin-top: 1.75rem;
+      padding: 1.75rem 1.5rem 1.75rem;
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      box-shadow: var(--shadow-soft);
+      background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 65%),
+        radial-gradient(circle at bottom right, rgba(15, 23, 42, 0.9), #020617);
+    }
+
+    .eyebrow-row {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.25rem 0.85rem;
       border-radius: var(--radius-pill);
-      padding: 4px 10px;
-      background: rgba(15, 23, 42, 0.96);
-      border: 1px solid rgba(148, 163, 184, 0.5);
-      margin-bottom: 10px;
-      font-size: 11px;
-      letter-spacing: 0.14em;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      color: var(--text-soft);
+      font-size: 0.72rem;
       text-transform: uppercase;
-      color: var(--muted);
+      letter-spacing: 0.13em;
+      margin-bottom: 1.1rem;
     }
 
     .eyebrow-dot {
-      width: 7px;
-      height: 7px;
+      width: 8px;
+      height: 8px;
       border-radius: 999px;
       background: #22c55e;
-      box-shadow: 0 0 14px rgba(34, 197, 94, 0.9);
+      box-shadow: 0 0 0 6px rgba(34, 197, 94, 0.28);
     }
 
-    h1 {
-      font-size: 26px;
+    .hero h1 {
+      margin: 0 0 0.85rem;
+      font-size: 1.9rem;
       line-height: 1.25;
-      color: var(--heading);
-      margin-bottom: 10px;
+      letter-spacing: -0.035em;
     }
 
-    @media (min-width: 640px) {
-      h1 {
-        font-size: 32px;
-      }
+    .hero h1 span.highlight {
+      color: var(--accent-strong);
     }
 
-    .hero > p {
-      font-size: 15px;
-      color: var(--muted);
-      margin-bottom: 14px;
+    .hero p.lead {
+      margin: 0 0 1.4rem;
+      font-size: 0.97rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+      max-width: 32rem;
     }
 
     .pill-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 6px;
-      margin-bottom: 16px;
+      gap: 0.45rem;
+      margin-bottom: 1.2rem;
     }
 
     .pill {
+      padding: 0.22rem 0.78rem;
       border-radius: var(--radius-pill);
-      background: var(--pill);
-      border: 1px solid rgba(148, 163, 184, 0.35);
-      font-size: 11px;
-      padding: 4px 9px;
-      color: var(--muted);
-      letter-spacing: 0.08em;
+      background: var(--pill-bg);
+      border: 1px solid var(--pill-border);
+      font-size: 0.72rem;
+      color: var(--text-soft);
       text-transform: uppercase;
+      letter-spacing: 0.08em;
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 12px;
+      gap: 0.75rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .btn-primary {
+      padding: 0.70rem 1.3rem;
+      border-radius: var(--radius-pill);
+      border: none;
+      background: linear-gradient(135deg, #0ea5e9, #22d3ee);
+      color: #e0f2fe;
+      font-weight: 600;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 18px 48px rgba(56, 189, 248, 0.4);
+      text-decoration: none;
+      white-space: nowrap;
     }
 
     .btn-outline {
+      padding: 0.70rem 1.25rem;
       border-radius: var(--radius-pill);
-      padding: 9px 18px;
-      border: 1px solid rgba(148, 163, 184, 0.7);
-      background: rgba(15, 23, 42, 0.96);
-      color: var(--text);
-      font-size: 14px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.9);
+      color: var(--text-main);
       font-weight: 500;
+      font-size: 0.88rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      text-decoration: none;
+      white-space: nowrap;
     }
 
     .hero-footer {
-      margin-top: 4px;
-      font-size: 12px;
-      color: var(--muted);
+      margin-top: 1rem;
+      font-size: 0.78rem;
+      color: var(--text-soft);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      align-items: baseline;
     }
 
-    .highlight {
-      color: var(--accent-strong);
+    .hero-footer span.highlight {
+      color: var(--accent);
       font-weight: 500;
     }
 
-    /* Cards / Sections */
+    /* SECTION LAYOUTS */
 
-    section.card {
+    section {
+      margin-top: var(--gap-section);
+    }
+
+    h2.section-title {
+      margin: 0 0 0.4rem;
+      font-size: 1.25rem;
+      letter-spacing: -0.01em;
+    }
+
+    p.section-subtitle {
+      margin: 0 0 1.4rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      max-width: 32rem;
+    }
+
+    /* BUSINESS CARDS */
+
+    .grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.0rem;
+    }
+
+    .card {
       border-radius: var(--radius-lg);
-      background: var(--card);
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      padding: 16px 16px 14px;
+      border: 1px solid var(--card-border);
+      background: radial-gradient(circle at top left, rgba(15, 23, 42, 0.95), #020617);
+      padding: 1.1rem 1.1rem 1.1rem;
+      box-shadow: 0 18px 48px rgba(15, 23, 42, 0.85);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 0.6rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .card-title {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .card-tagline {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-soft);
+    }
+
+    .card-subtitle {
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.11em;
+      color: var(--text-soft);
+      margin-bottom: 0.35rem;
+    }
+
+    .card-body {
+      font-size: 0.86rem;
+      line-height: 1.55;
+      color: var(--text-muted);
+    }
+
+    /* COMMAND DECK CARD */
+
+    .command-card {
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 60%),
+        radial-gradient(circle at bottom right, rgba(15, 23, 42, 0.95), #020617);
+      padding: 1.4rem 1.3rem 1.4rem;
       box-shadow: var(--shadow-soft);
     }
 
-    section.card + section.card {
-      margin-top: 14px;
+    .command-card h2 {
+      margin: 0 0 0.4rem;
+      font-size: 1.15rem;
     }
 
-    h2 {
-      font-size: 19px;
-      color: var(--heading);
-      margin-bottom: 4px;
+    .command-card p {
+      margin: 0 0 0.9rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      max-width: 34rem;
     }
 
-    .section-subtitle {
-      font-size: 13px;
-      color: var(--muted);
-      margin-bottom: 12px;
+    .command-card ul {
+      margin: 0 0 1.0rem;
+      padding-left: 1.1rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
     }
 
-    .division-list,
-    .track-list,
-    .top10-list {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+    .command-card ul li + li {
+      margin-top: 0.25rem;
     }
 
-    .division,
-    .track,
-    .top10-item {
-      border-radius: var(--radius-md);
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      background: radial-gradient(circle at top left, #020617 0, #020617 60%, #000 100%);
-      padding: 12px 12px 11px;
-    }
-
-    .division h3,
-    .track h3,
-    .top10-item h3 {
-      font-size: 15px;
-      color: var(--heading);
-      margin-bottom: 4px;
-    }
-
-    .division span,
-    .track span {
-      display: block;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--muted);
-      margin-bottom: 2px;
-    }
-
-    .division p,
-    .track p,
-    .top10-item p {
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    /* Monetization table */
-
-    .monetization-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 6px;
-      font-size: 13px;
-    }
-
-    .monetization-table th,
-    .monetization-table td {
-      padding: 6px 4px;
-      border-bottom: 1px solid rgba(148, 163, 184, 0.35);
-    }
-
-    .monetization-table th {
-      text-align: left;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--muted);
-    }
-
-    .monetization-table tr:last-child td {
-      border-bottom: none;
-    }
-
-    .badge-soft {
-      display: inline-flex;
-      padding: 2px 8px;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.98);
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      font-size: 11px;
-      color: var(--muted);
-      margin-top: 4px;
-    }
-
-    /* Top 10 list */
-
-    .top10-intro {
-      font-size: 13px;
-      color: var(--muted);
-      margin-bottom: 10px;
-    }
-
-    .top10-item h3 span {
-      font-size: 13px;
-      color: var(--muted);
-      font-weight: 500;
-    }
-
-    .top10-item strong {
-      color: var(--heading);
-    }
-
-    /* Command Deck */
-
-    .command-cta {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      margin-top: 10px;
-    }
-
-    .command-bullets {
-      font-size: 13px;
-      color: var(--muted);
-      padding-left: 18px;
-    }
-
-    .command-bullets li {
-      margin-bottom: 4px;
-    }
-
-    /* Footer */
+    /* FOOTER */
 
     footer {
-      margin-top: 18px;
-      padding: 10px 6px 0;
-      font-size: 11px;
-      color: var(--muted);
-      text-align: center;
-      border-top: 1px solid rgba(30, 64, 175, 0.7);
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 1.25rem 1.5rem;
+      font-size: 0.74rem;
+      color: var(--text-soft);
+      text-align: left;
     }
 
     footer span {
-      color: var(--accent-strong);
-      font-weight: 500;
+      color: var(--accent-soft);
+    }
+
+    /* SMALL SCREENS */
+
+    @media (min-width: 720px) {
+      .hero {
+        padding: 2.1rem 2.1rem 2.0rem;
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.0rem;
+      }
+
+      .card {
+        padding: 1.1rem 1.15rem 1.15rem;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="page-shell">
-    <header>
-      <div class="brand">
-        <div class="brand-logo">S</div>
-        <div class="brand-text">
-          <div class="brand-name">SSAG</div>
-          <div class="brand-tagline">Stealth Systems Automation Group</div>
-        </div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="brand">
+      <div class="brand-badge">S</div>
+      <div class="brand-text">
+        <div class="brand-title">SSAG</div>
+        <div class="brand-subtitle">Stealth Systems Automation Group</div>
       </div>
-      <div class="header-actions">
-        <button class="btn-pill">Log in</button>
+    </div>
+
+    <div class="header-actions">
+      <button class="btn-pill">Log in</button>
+      <a
+        class="btn-pill btn-pill-primary"
+        href="https://forms.gle/SpxuXWmUbDeeeBXC9"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Claim a Territory
+      </a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero" aria-label="Stealth Enterprise Shell">
+      <div class="eyebrow-row">
+        <span class="eyebrow-dot"></span>
+        <span>Stealth enterprise shell</span>
+      </div>
+
+      <h1>
+        Stealth enterprise system for
+        <span class="highlight">licensors, operators, and investors.</span>
+      </h1>
+
+      <p class="lead">
+        SSAG is a hybrid business platform that lets you sell city licenses,
+        operator kits, and digital business packs from a single, unified
+        command environment.
+      </p>
+
+      <div class="pill-row">
+        <span class="pill">Stealth operations</span>
+        <span class="pill">License-ready systems</span>
+        <span class="pill">Operator network</span>
+        <span class="pill">Investor suite</span>
+      </div>
+
+      <div class="hero-actions">
         <a
-          href="https://forms.gle/SpxuXWmUbDeeeBXC9"
           class="btn-primary"
+          href="https://forms.gle/SpxuXWmUbDeeeBXC9"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
         >
-          Claim a Territory
+          Open Command Deck
+        </a>
+
+        <a
+          class="btn-outline"
+          href="https://forms.gle/SpxuXWmUbDeeeBXC9"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Operator &amp; Investor Offers
         </a>
       </div>
-    </header>
 
-    <main>
-      <!-- HERO -->
-      <section class="hero" id="top">
-        <div class="eyebrow">
-          <span class="eyebrow-dot"></span>
-          <span>Stealth enterprise shell</span>
-        </div>
-        <h1>
-          Stealth enterprise system for licensors, operators, and investors.
-        </h1>
+      <div class="hero-footer">
+        <span>Present SSAG as the platform your buyers plug into.</span>
+        <span class="highlight">Not just another single business for sale.</span>
+      </div>
+    </section>
+
+    <!-- TOP 10 BUSINESS SYSTEMS -->
+    <section id="systems" aria-label="Top 10 SSAG Business Systems">
+      <h2 class="section-title">Top 10 SSAG Business Systems</h2>
+      <p class="section-subtitle">
+        These are turnkey operator systems you can license under the SSAG umbrella.
+        Each one is built for fast start-up, low overhead, and strong income potential.
+      </p>
+
+      <div class="grid">
+        <!-- 1 – Wedding Officiant & Minister -->
+        <article class="card">
+          <div class="card-header">
+            <div class="card-title">Wedding Officiant &amp; Minister</div>
+            <div class="card-tagline">Events • High Margin</div>
+          </div>
+          <div class="card-body">
+            Licensed officiant services for weddings, elopements, and vow
+            renewals with premium, courthouse-alternative packages.
+          </div>
+        </article>
+
+        <!-- 2 – Short-Term Rental / B&B Co-Host -->
+        <article class="card">
+          <div class="card-header">
+            <div class="card-title">Short-Term Rental / B&amp;B Co-Host</div>
+            <div class="card-tagline">Property • Recurring</div>
+          </div>
+          <div class="card-body">
+            Manage Airbnb / STR units for owners: cleaning, guest messaging,
+            check-ins and check-outs, and simple revenue-share deals.
+          </div>
+        </article>
+
+        <!-- 3 – Tucson Home Concierge -->
+        <article class="card">
+          <div class="card-header">
+            <div class="card-title">Tucson Home Concierge</div>
+            <div class="card-tagline">Premium Local Brand</div>
+          </div>
+          <div class="card-body">
+            Home check-ins, light maintenance coordination, mail and package
+            pickup, and VIP household support for traveling owners and snowbirds.
+          </div>
+        </article>
+
+        <!-- 4 – Courier & Errand Runner -->
+        <article class="card">
+          <div class="card-header">
+            <div class="card-title">Courier &amp; Errand Runner</div>
+            <div class="card-tagline">Same-Day • Flexible</div>
+          </div>
+          <div class="card-body">
+            Same-day delivery of prescriptions, documents, small parcels, and
+            urgent errands across the city. Built for speed and repeat clients.
+          </div>
+        </article>
+
+        <!-- 5 – Pressure Washing & Surface Cleaning -->
+        <article class="card">
+          <div class="card-header">
+            <div class="card-title">Pressure Washing &amp; Surface Cleaning</div>
+            <div class="card-tagline">Property Care</div>
+          </div>
+          <div class="card-body">
+            Driveways, pool decks, storefronts, and more with clear
+            per-square-foot pricing and seasonal maintenance plans.
+          </div>
+        </article>
+
+        <!-- 6 – Palm Tree & Yard Cleanup Support -->
+        <article class="card">
+          <div class="card-header">
+            <div class="card-title">Palm Tree &amp; Yard Cleanup Support</div>
+            <div class="card-tagline">Outdoor Services</div>
+          </div>
+          <div class="card-body">
+            Coordinated palm trimming and yard cleanups using vetted
+            subcontractors, plus haul-away and disposal options for clients.
+          </div>
+        </article>
+
+        <!-- 7 – Mobile Detailing System -->
+        <article class="card">
+          <div class="card-header">
+            <div class="card-title">Mobile Detailing System</div>
+            <div class="card-tagline">On-Site • Upsell Heavy</div>
+          </div>
+          <div class="card-body">
+            Full interior and exterior detailing with premium upgrades,
+            maintenance plans, and fleet accounts for recurring revenue.
+          </div>
+        </article>
+
+        <!-- 8 – Junk Removal & Hauling -->
+        <article class="card">
+          <div class="card-header">
+            <div class="card-title">Junk Removal &amp; Hauling</div>
+            <div class="card-tagline">High Demand</div>
+          </div>
+          <div class="card-body">
+            Same-day junk pickup, light demolition, and haul-away jobs with
+            simple truck-based pricing. Strong profit with minimal setup.
+          </div>
+        </article>
+
+        <!-- 9 – Cleaning Services -->
+        <article class="card">
+          <div class="card-header">
+            <div class="card-title">Cleaning Services</div>
+            <div class="card-tagline">Recurring Revenue</div>
+          </div>
+          <div class="card-body">
+            Move-out, Airbnb, residential, and commercial cleaning systems
+            under one playbook, built for repeat bookings and subscriptions.
+          </div>
+        </article>
+
+        <!-- 10 – Local Micro-Agency -->
+        <article class="card">
+          <div class="card-header">
+            <div class="card-title">Local Micro-Agency</div>
+            <div class="card-tagline">Digital Services</div>
+          </div>
+          <div class="card-body">
+            Webpages, simple funnels, and ad setups for local businesses, with
+            automation templates that plug back into the SSAG ecosystem.
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- COMMAND DECK SUMMARY -->
+    <section id="command-deck" aria-label="SSAG Command Deck">
+      <div class="command-card">
+        <h2>Command Deck</h2>
         <p>
-          SSAG is a hybrid business platform that lets you sell city licenses,
-          operator kits, and digital business packs from a single, unified
-          command environment.
+          The SSAG Command Deck is your control surface for licenses, operators,
+          and investors. Use this page as the shell that all of your deals plug into.
         </p>
 
-        <div class="pill-row">
-          <span class="pill">Stealth operations</span>
-          <span class="pill">License-ready systems</span>
-          <span class="pill">Operator network</span>
-          <span class="pill">Investor suite</span>
-        </div>
+        <ul>
+          <li>Drop in your payment buttons, checkout links, or proposal forms.</li>
+          <li>Connect Calendly or any scheduling link for operator and investor calls.</li>
+          <li>Link to private Notion docs, Google Drive folders, or data rooms.</li>
+          <li>Route deals based on whether someone is a license buyer, operator, or investor.</li>
+        </ul>
 
         <div class="hero-actions">
           <a
-            href="https://forms.gle/SpxuXWmUbDeeeBXC9"
             class="btn-primary"
+            href="https://forms.gle/SpxuXWmUbDeeeBXC9"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
           >
-            Open Command Deck
+            Apply to Launch a Territory
           </a>
           <a
-            href="https://forms.gle/SpxuXWmUbDeeeBXC9"
             class="btn-outline"
+            href="https://forms.gle/SpxuXWmUbDeeeBXC9"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
           >
-            View Operator &amp; Investor Offers
+            List Me as an Operator or Investor
           </a>
         </div>
+      </div>
+    </section>
+  </main>
 
-        <div class="hero-footer">
-          Present SSAG as the platform your buyers plug into.
-          <span class="highlight">Not just another single business for sale.</span>
-        </div>
-      </section>
-
-      <!-- DIVISIONS -->
-      <section class="card" id="divisions">
-        <h2>Divisions Snapshot</h2>
-        <p class="section-subtitle">
-          Four connected divisions you can sell, license, or operate under one
-          unified brand.
-        </p>
-
-        <div class="division-list">
-          <div class="division">
-            <span>SSAG Ops</span>
-            <h3>Business-in-a-box systems</h3>
-            <p>
-              Service menus, SOPs, and playbooks you can license, sell, or
-              operate: cleaning, detailing, junk removal, courier, micro-agency,
-              and more.
-            </p>
-          </div>
-
-          <div class="division">
-            <span>SSAG AI</span>
-            <h3>Prompt &amp; workflow engine</h3>
-            <p>
-              AI prompts, workflows, and assistants that turn SSAG playbooks
-              into live operators sitting inside your business.
-            </p>
-          </div>
-
-          <div class="division">
-            <span>SSAG Licensing</span>
-            <h3>Territory &amp; city frameworks</h3>
-            <p>
-              City, county, and state-level licensing models with options for
-              exclusivity. Launch AZ-first, then expand nationally and
-              internationally.
-            </p>
-          </div>
-
-          <div class="division">
-            <span>SSAG Operator Network</span>
-            <h3>Franchise-style operator kits</h3>
-            <p>
-              Franchise-style kits without heavy franchise fees or overhead.
-              Ideal for trusted partners and high-ticket operator deals.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- MONETIZATION -->
-      <section class="card" id="offers">
-        <h2>Monetization Overview</h2>
-        <p class="section-subtitle">
-          Position SSAG as a revenue engine instead of a single product.
-        </p>
-
-        <table class="monetization-table">
-          <thead>
-            <tr>
-              <th>Channel</th>
-              <th>Example range</th>
-              <th>How you frame it</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>City license</td>
-              <td>$2,500 – $10,000</td>
-              <td>
-                Exclusive rights per city, including multiple connected business
-                systems.
-              </td>
-            </tr>
-            <tr>
-              <td>Operator kit</td>
-              <td>$5,000 – $15,000</td>
-              <td>
-                Higher-support, franchise-style package for serious operators.
-              </td>
-            </tr>
-            <tr>
-              <td>Digital business packs</td>
-              <td>$29 – $199</td>
-              <td>
-                Downloadable business-in-a-box frameworks for fast-launch
-                income.
-              </td>
-            </tr>
-            <tr>
-              <td>Investor participation</td>
-              <td>$5,000 – $50,000</td>
-              <td>
-                Structured capital raise around platform growth and territory
-                rollout.
-              </td>
-            </tr>
-          </tbody>
-        </table>
-
-        <div class="badge-soft">
-          Use your own checkout links • Attach Stripe, PayPal, or funnels
-        </div>
-      </section>
-
-      <!-- OPERATOR TRACK -->
-      <section class="card" id="apply">
-        <h2>Operator Track</h2>
-        <p class="section-subtitle">
-          Application-based onboarding into your systems.
-        </p>
-
-        <div class="track-list">
-          <div class="track">
-            <span>FORM</span>
-            <h3>Short application intake</h3>
-            <p>
-              Simple intake form asking about market, budget, and timeline. You
-              decide who qualifies for a territory or kit.
-            </p>
-          </div>
-
-          <div class="track">
-            <span>CALL / DM</span>
-            <h3>High-signal conversations only</h3>
-            <p>
-              Use the Command Deck to route calls, DMs, or messages that qualify
-              into operator or city-license offers.
-            </p>
-          </div>
-
-          <div class="track">
-            <span>OFFERS</span>
-            <h3>Tiered SSAG operator offers</h3>
-            <p>
-              Digital packs, operator kits, and city licenses – all from the
-              same system shell.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- INVESTOR TRACK -->
-      <section class="card" id="invest">
-        <h2>Investor &amp; Partner Track</h2>
-        <p class="section-subtitle">
-          Show how investors plug capital into territories, systems, or
-          portfolio deals.
-        </p>
-
-        <div class="track-list">
-          <div class="track">
-            <span>STRUCTURE</span>
-            <h3>Clear deal structures</h3>
-            <p>
-              Equity, revenue share, or note-style deals tied to specific
-              territories or business packs.
-            </p>
-          </div>
-
-          <div class="track">
-            <span>PIPELINE</span>
-            <h3>Growth around real operators</h3>
-            <p>
-              Investors plug into an expanding map of operators, licenses, and
-              city-level shells – not random one-off hustles.
-            </p>
-          </div>
-
-          <div class="track">
-            <span>ROOM</span>
-            <h3>Private deal rooms</h3>
-            <p>
-              Route serious partners to a private deck or data room once they’re
-              qualified and ready.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- TOP 10 BUSINESSES -->
-      <section class="card" id="top10">
-        <h2>Top 10 SSAG Business Systems</h2>
-        <p class="top10-intro">
-          These are core businesses operators can launch under the SSAG
-          umbrella. Each one is built for fast start-up, low overhead, and
-          strong income potential.
-        </p>
-
-        <div class="top10-list">
-          <div class="top10-item">
-            <h3>1. SSAG Notary Division</h3>
-            <p>
-              Mobile notary, loan signing, and fingerprinting add-ons. High
-              demand, flexible, and very profitable. Great starter business for
-              beginners.
-            </p>
-          </div>
-
-          <div class="top10-item">
-            <h3>2. SSAG DMV / Third-Party Motor Vehicle Services</h3>
-            <p>
-              Titles, tags, registration services, and more. Huge demand and low
-              competition. One of the strongest licensing opportunities.
-            </p>
-          </div>
-
-          <div class="top10-item">
-            <h3>3. SSAG Wedding Minister &amp; Officiant Services</h3>
-            <p>
-              Weddings, elopements, and courthouse alternatives with premium
-              packages. High-profit per booking and strong upsell potential.
-            </p>
-          </div>
-
-          <div class="top10-item">
-            <h3>4. SSAG R&amp;B Co-Host (Airbnb-Style)</h3>
-            <p>
-              Manage short-term rentals for owners without owning property.
-              Recurring income and big-operator opportunity.
-            </p>
-          </div>
-
-          <div class="top10-item">
-            <h3>5. SSAG Home Watch &amp; Property Check System</h3>
-            <p>
-              Weekly or bi-weekly check-ins for snowbirds and landlords. Super
-              low overhead, subscription-based, and easy to scale.
-            </p>
-          </div>
-
-          <div class="top10-item">
-            <h3>6. SSAG Courier / Document &amp; Parts Delivery</h3>
-            <p>
-              Same-day delivery, prescriptions, documents, and small parts.
-              Perfect for local partnerships and works with almost any vehicle.
-            </p>
-          </div>
-
-          <div class="top10-item">
-            <h3>7. SSAG Mobile Detailing System</h3>
-            <p>
-              Premium mobile detailing with memberships and add-ons. High
-              margins and steady repeat business.
-            </p>
-          </div>
-
-          <div class="top10-item">
-            <h3>8. SSAG Junk Removal &amp; Hauling</h3>
-            <p>
-              Same-day junk pickup, hauling, and property clean-outs. Extremely
-              profitable with minimal setup.
-            </p>
-          </div>
-
-          <div class="top10-item">
-            <h3>9. SSAG Cleaning Services</h3>
-            <p>
-              Move-out, Airbnb, residential, and commercial routes. Powerful
-              recurring revenue model.
-            </p>
-          </div>
-
-          <div class="top10-item">
-            <h3>10. SSAG Local Micro-Agency</h3>
-            <p>
-              Local business webpages, marketing, ad setups, and automations.
-              Low cost to start and high demand from small businesses.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- COMMAND DECK -->
-      <section class="card" id="command-deck">
-        <h2>Command Deck</h2>
-        <p class="section-subtitle">
-          This is the control surface where you route deals, operators, and
-          investors into the right tracks.
-        </p>
-
-        <div class="command-cta">
-          <p>
-            Plug SSAG into your existing tools instead of ripping everything
-            out. Use:
-          </p>
-          <ul class
+  <footer>
+    © <span>SSAG – Stealth Systems Automation Group.</span>
+    Front-end shell hosted on GitHub Pages. Connect this to your automations,
+    payment links, and deal rooms behind the scenes.
+  </footer>
+</body>
+            </html>
+  
