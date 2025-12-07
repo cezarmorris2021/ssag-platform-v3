@@ -131,4 +131,513 @@
       font-size: 12px;
       border: 1px solid rgba(148,163,184,0.6);
       color: var(--muted);
-      background: rgba(15,23,42,0.
+      background: rgba(15,23,42,0.9);
+    }
+    .btn-primary {
+      border-radius: var(--radius-pill);
+      padding: 8px 16px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #020617;
+      background: linear-gradient(135deg, #0ea5e9, #22d3ee);
+      box-shadow: 0 12px 30px rgba(14,165,233,0.75);
+      border: none;
+      cursor: pointer;
+    }
+    .btn-outline {
+      border-radius: var(--radius-pill);
+      padding: 8px 16px;
+      font-size: 12px;
+      font-weight: 500;
+      border: 1px solid rgba(148,163,184,0.7);
+      background: rgba(15,23,42,0.9);
+      color: var(--text);
+      cursor: pointer;
+    }
+
+    /* Main layout */
+    main {
+      margin-top: 16px;
+      display: grid;
+      gap: 18px;
+    }
+    .hero {
+      border-radius: 24px;
+      padding: 22px 18px 20px;
+      background:
+        radial-gradient(circle at top, rgba(15,23,42,0.9), rgba(15,23,42,1));
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      box-shadow: var(--shadow-soft);
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+      background: rgba(15,23,42,0.9);
+      border-radius: var(--radius-pill);
+      padding: 4px 10px;
+      border: 1px solid rgba(55,65,81,0.9);
+      margin-bottom: 10px;
+    }
+    .eyebrow-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 999px;
+      background: radial-gradient(circle at center, #4ade80, #16a34a, #052e16);
+      box-shadow: 0 0 18px rgba(34,197,94,0.9);
+    }
+    h1 {
+      font-size: 26px;
+      line-height: 1.18;
+      margin-bottom: 10px;
+    }
+    @media (min-width: 820px) {
+      h1 {
+        font-size: 32px;
+      }
+    }
+    .hero p {
+      font-size: 14px;
+      color: var(--muted);
+      max-width: 620px;
+      margin-bottom: 12px;
+    }
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+    .pill {
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(148,163,184,0.5);
+      background: rgba(15,23,42,0.95);
+      color: var(--muted);
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .hero-footer {
+      font-size: 11px;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px 12px;
+      margin-top: 6px;
+    }
+    .hero-footer span.highlight {
+      color: var(--accent-strong);
+      font-weight: 500;
+    }
+
+    .grid {
+      display: grid;
+      gap: 16px;
+    }
+    @media (min-width: 900px) {
+      .grid {
+        grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
+        align-items: flex-start;
+      }
+    }
+    .card {
+      border-radius: 20px;
+      padding: 16px 14px 14px;
+      background: radial-gradient(circle at top left, rgba(15,23,42,0.98), #020617);
+      border: 1px solid var(--border);
+      box-shadow: 0 18px 40px rgba(15,23,42,0.95);
+    }
+    .card h2 {
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
+    .section-subtitle {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .division-list {
+      display: grid;
+      gap: 10px;
+    }
+    .division {
+      border-radius: 16px;
+      padding: 10px 10px 10px;
+      background:
+        radial-gradient(circle at top, rgba(15,23,42,1), #020617);
+      border: 1px solid rgba(75,85,99,0.9);
+    }
+    .division h3 {
+      font-size: 14px;
+      margin-bottom: 3px;
+    }
+    .division p {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+    .division span {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+    }
+    .badge {
+      font-size: 10px;
+      padding: 3px 8px;
+      border-radius: var(--radius-pill);
+      background: rgba(15,23,42,0.9);
+      border: 1px solid rgba(148,163,184,0.6);
+      color: var(--muted);
+    }
+
+    .monetization-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+      margin-top: 8px;
+    }
+    .monetization-table th,
+    .monetization-table td {
+      padding: 6px 4px;
+      vertical-align: top;
+    }
+    .monetization-table th {
+      text-align: left;
+      font-size: 11px;
+      color: var(--muted);
+      border-bottom: 1px solid rgba(55,65,81,0.9);
+    }
+    .monetization-table tr + tr td {
+      border-top: 1px dashed rgba(30, 64, 175, 0.7);
+    }
+    .monetization-table td:nth-child(2) {
+      white-space: nowrap;
+      padding-right: 10px;
+    }
+    .monetization-table td:nth-child(3) {
+      color: var(--muted);
+    }
+
+    .two-col {
+      display: grid;
+      gap: 14px;
+    }
+    @media (min-width: 880px) {
+      .two-col {
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      }
+    }
+    .list {
+      list-style: none;
+      font-size: 12px;
+      color: var(--muted);
+      display: grid;
+      gap: 6px;
+      margin-top: 6px;
+    }
+    .list li::before {
+      content: "• ";
+      color: var(--accent);
+    }
+
+    .business-grid {
+      display: grid;
+      gap: 10px;
+      margin-top: 8px;
+    }
+    @media (min-width: 880px) {
+      .business-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+    .biz {
+      border-radius: 14px;
+      padding: 10px 10px 9px;
+      background: rgba(15,23,42,0.98);
+      border: 1px solid rgba(55,65,81,0.9);
+    }
+    .biz h3 {
+      font-size: 13px;
+      margin-bottom: 3px;
+    }
+    .biz p {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    footer {
+      margin-top: 24px;
+      font-size: 10px;
+      color: var(--muted);
+      text-align: center;
+      padding-top: 10px;
+      border-top: 1px dashed rgba(31,41,55,0.9);
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="brand">
+        <div class="brand-pill">S</div>
+        <div class="brand-text">
+          <span>SSAG</span>
+          <span>Stealth Systems Automation Group</span>
+        </div>
+      </div>
+      <nav aria-label="Primary">
+        <a href="#top" class="nav-link active">Home</a>
+        <a href="#divisions" class="nav-link">Platform</a>
+        <a href="#offers-menu" class="nav-link">Opportunities</a>
+        <a href="#top-businesses" class="nav-link">Top Businesses</a>
+        <a href="#apply" class="nav-link">Become an Operator</a>
+      </nav>
+      <div class="header-actions">
+        <button class="btn-pill" onclick="window.location.href='https://forms.gle/SpxuXWmUbDeeeBXC9'">
+          Operator Login / Apply
+        </button>
+        <button class="btn-primary" onclick="window.location.href='https://forms.gle/SpxuXWmUbDeeeBXC9'">
+          Open Command Deck
+        </button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          <span>Applied business systems</span>
+        </div>
+        <h1>Launch a high-performance local business with the SSAG platform.</h1>
+        <p>
+          SSAG (Stealth Systems Automation Group) blends proven service businesses, licensing models,
+          and AI-powered systems into one platform. Apply to run a turnkey business, operate a territory,
+          or secure licensing rights in your city.
+        </p>
+        <div class="pill-row">
+          <span class="pill">Done-for-you local business systems</span>
+          <span class="pill">Operator &amp; license opportunities</span>
+          <span class="pill">Built for real-world cash flow</span>
+          <span class="pill">AZ-first, scalable nationally</span>
+        </div>
+        <div class="hero-actions">
+          <button class="btn-primary" onclick="window.location.href='https://forms.gle/SpxuXWmUbDeeeBXC9'">
+            Apply Now – Open Command Deck
+          </button>
+          <button class="btn-outline" onclick="document.getElementById('offers-menu').scrollIntoView({behavior:'smooth'})">
+            View Operator &amp; License Options
+          </button>
+        </div>
+        <div class="hero-footer">
+          <span>Built for operators, partners, and investors who want real-world results.</span>
+          <span class="highlight">You bring commitment – SSAG brings systems.</span>
+        </div>
+      </section>
+
+      <section class="grid" aria-label="Divisions and monetization">
+        <article class="card" id="divisions">
+          <h2>The SSAG platform</h2>
+          <p class="section-subtitle">
+            Multiple divisions working together so you’re never starting from zero. You plug into the system
+            and focus on running the business.
+          </p>
+          <div class="division-list">
+            <div class="division">
+              <h3>SSAG Ops</h3>
+              <p>
+                Real-world service businesses you can run locally: operations checklists, scripts,
+                pricing structures, and launch plans.
+              </p>
+              <span>Cleaning &amp; detailing, junk removal, concierge, and more.</span>
+            </div>
+            <div class="division">
+              <h3>SSAG AI</h3>
+              <p>
+                AI workflows that help with outreach, quoting, follow-up, and customer communication –
+                so you move faster and close more.
+              </p>
+              <span>Messages, ads, responses, and documentation on tap.</span>
+            </div>
+            <div class="division">
+              <h3>SSAG Licensing</h3>
+              <p>
+                City and territory-level opportunities to run SSAG systems under license, with the option
+                for exclusive rights in certain areas.
+              </p>
+              <span>Start in Arizona and expand into additional markets over time.</span>
+            </div>
+            <div class="division">
+              <h3>SSAG Operator Network</h3>
+              <p>
+                A growing network of operators running SSAG systems locally, sharing feedback and results
+                to keep improving the platform.
+              </p>
+              <span>Perfect for serious operators and partners who want a structured path.</span>
+            </div>
+          </div>
+        </article>
+
+        <aside class="card" id="offers-menu">
+          <h2>Ways to partner with SSAG</h2>
+          <p class="section-subtitle">
+            Choose the level that fits you today – from starter packs to full city opportunities.
+          </p>
+          <table class="monetization-table">
+            <thead>
+              <tr>
+                <th>Track</th>
+                <th>Typical range</th>
+                <th>Who it’s for</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Digital Business Pack</td>
+                <td>$97 – $199</td>
+                <td>People who want a ready-made framework and plan to launch a local service business quickly.</td>
+              </tr>
+              <tr>
+                <td>Operator Kit</td>
+                <td>$2,500 – $7,500</td>
+                <td>Hands-on operators who want direct guidance, systems, and a defined territory.</td>
+              </tr>
+              <tr>
+                <td>City License</td>
+                <td>$5,000 – $15,000+</td>
+                <td>Partners who want long-term control of an entire city under the SSAG umbrella.</td>
+              </tr>
+              <tr>
+                <td>Investor / Partner</td>
+                <td>$5,000 – $50,000+</td>
+                <td>Investors who want exposure to a growing network of local cash-flow businesses.</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="badge-row">
+            <span class="badge">Structured operator paths</span>
+            <span class="badge">Territory-based opportunities</span>
+            <span class="badge">Built for repeatable systems</span>
+          </div>
+          <div class="hero-actions" style="margin-top:12px;">
+            <button class="btn-primary" onclick="window.location.href='https://forms.gle/SpxuXWmUbDeeeBXC9'">
+              Start Your Application
+            </button>
+            <button class="btn-outline" onclick="window.location.href='https://forms.gle/SpxuXWmUbDeeeBXC9'">
+              Ask Which Track Fits Me
+            </button>
+          </div>
+        </aside>
+      </section>
+
+      <section class="card" id="top-businesses">
+        <h2>Top 10 SSAG business systems</h2>
+        <p class="section-subtitle">
+          A sample of the types of businesses SSAG is wiring into the platform. Availability may vary by city and track.
+        </p>
+        <div class="business-grid">
+          <div class="biz">
+            <h3>Mobile Notary Public</h3>
+            <p>
+              Travel-based notarization for clients who need documents signed at home, offices, or neutral locations.
+            </p>
+          </div>
+          <div class="biz">
+            <h3>3rd-Party DMV Service</h3>
+            <p>
+              Assist with registration, title transfers, and paperwork to save people time at official offices.
+            </p>
+          </div>
+          <div class="biz">
+            <h3>Wedding Officiant / Minister</h3>
+            <p>
+              Licensed officiant services for weddings, elopements, and vow renewals with packaged offerings.
+            </p>
+          </div>
+          <div class="biz">
+            <h3>Airbnb / Short-Term Rental Co-Host</h3>
+            <p>
+              Manage listings, cleanings, guest messaging, and turnovers for property owners.
+            </p>
+          </div>
+          <div class="biz">
+            <h3>Home Concierge &amp; Errand Service</h3>
+            <p>
+              Personal assistant style services for busy households: errands, coordination, and home support.
+            </p>
+          </div>
+          <div class="biz">
+            <h3>Junk Removal &amp; Hauling</h3>
+            <p>
+              On-call removal of unwanted items, with upsell paths into clean-outs and special projects.
+            </p>
+          </div>
+          <div class="biz">
+            <h3>Mobile Detailing &amp; Wash</h3>
+            <p>
+              On-site auto detailing for cars, trucks, and fleets with recurring contracts potential.
+            </p>
+          </div>
+          <div class="biz">
+            <h3>Pressure Washing &amp; Exterior Cleanup</h3>
+            <p>
+              Driveways, pool decks, storefronts, and more – high-visibility results in local neighborhoods.
+            </p>
+          </div>
+          <div class="biz">
+            <h3>Palm Tree &amp; Light Landscape Services</h3>
+            <p>
+              Focused services like trimming, small cleanups, and seasonal maintenance for property owners.
+            </p>
+          </div>
+          <div class="biz">
+            <h3>Local Business Support Micro-Agency</h3>
+            <p>
+              Offer simple digital services – listings, reviews help, and basic ads – to small local businesses.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="card" id="command-deck">
+        <h2>What happens when you “Open Command Deck”</h2>
+        <p class="section-subtitle">
+          The Command Deck is your entry point into SSAG. It starts with a short application so we can match you to
+          the right path.
+        </p>
+        <div class="two-col">
+          <div>
+            <h3 style="font-size: 13px; margin-bottom: 4px;">Step 1 – Tell us about you</h3>
+            <ul class="list">
+              <li>Share your location, experience level, and how soon you want to get moving.</li>
+              <li>Tell us if you’re interested in one business, a territory, or a larger play.</li>
+              <li>Let us know your approximate launch budget and type of support you want.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 style="font-size: 13px; margin-bottom: 4px;">Step 2 – We match you to a track</h3>
+            <ul class="list">
+              <li>We review your answers and align you with Digital Pack, Operator Kit, City License, or Investor.</li>
+              <li>If there’s a fit, you’ll be invited to a call or message-based walkthrough.</li>
+              <li>You’ll see exactly what you’re getting before you commit.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="hero-actions" style="margin-top: 12px;">
+          <button class="btn-primary" onclick="window.location.href='https://forms.gle/SpxuXWmUbDeeeBXC9'">
+    
